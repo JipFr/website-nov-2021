@@ -5,6 +5,7 @@
 <script>
 	import Container from '$lib/layout/Container.svelte';
 	import TechItem from '$lib/TechItem.svelte';
+	import Collapsible from '$lib/util/Collapsible.svelte';
 </script>
 
 <svelte:head>
@@ -32,14 +33,6 @@
 
 	<h2>I have experience with</h2>
 
-	<p class="paragraph">To categorise my knowledge, I have the following levels</p>
-
-	<ol class="paragraph">
-		<li>I've used this technology in the past and I'm able to figure it out from there</li>
-		<li>I have written an app or website using this technology</li>
-		<li>I'm confident with this technology</li>
-	</ol>
-
 	<div class="tech-list">
 		<TechItem
 			title="TypeScript / JS"
@@ -60,6 +53,15 @@
 		<TechItem title="HTML" subtitle="Level 3" iconSource="/img/tech/html.png" bg="#F3E9E6" />
 		<TechItem title="(S)CSS" subtitle="Level 3" iconSource="/img/tech/scss.png" bg="#fcd7ea" />
 	</div>
+	<Collapsible title="Explanation about levels">
+		<p class="paragraph">To categorise my knowledge, I have the following levels</p>
+
+		<ol class="paragraph">
+			<li>I've used this technology in the past and I'm able to figure it out from there</li>
+			<li>I have written an app or website using this technology</li>
+			<li>I'm confident with this technology</li>
+		</ol>
+	</Collapsible>
 </Container>
 
 <style lang="scss">
@@ -67,5 +69,6 @@
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		margin: 20px 0;
 	}
 </style>
