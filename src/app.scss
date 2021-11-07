@@ -1,18 +1,30 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
-
 :root {
 
 	--body: white;
-	--text: #191919;
+	--text: #465C52;
+	--text-title: black;
 
 	--header-bg: #F3FCF8;
 	--header-text-link: #465C52;
 	--header-text-primary: black;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body: #202328;
+		--text: #929292;
+		--text-title: #ffffff;
+
+		--header-bg: #1b1b1b;
+		--header-text-primary: white;
+		--header-text-link: #bbb5b5;
+	}
+}
+
 html, body {
 	margin: 0;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -21,5 +33,18 @@ body {
 }
 
 body, input, textarea {
-	font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "segoe ui", Roboto, "helvetica neue", Arial, "noto sans", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol", "noto color emoji";;
+	font-family: inherit;
+}
+
+h1, h2, h3 {
+	color: var(--text-title);
+}
+
+h1 {
+	margin-top: 80px;
+}
+
+p.paragraph {
+	color: var(--text);
+	margin: 20px 0;
 }

@@ -46,7 +46,6 @@ header {
 	}
 	
 	.name {
-		font-family: Poppins, sans-serif;
 		font-weight: bold;
 		margin: 0;
 		font-size: 1.5rem;
