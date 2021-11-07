@@ -66,10 +66,12 @@ p.paragraph {
 	margin: 20px 0;
 }
 
-.post img {
+.post img,
+.post-img {
 	max-width: 100%;
 	border: 1px solid #e0ebe6;
 	display: block;
+	margin: 20px 0;
 }
 
 a.anchor {
