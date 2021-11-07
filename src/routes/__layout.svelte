@@ -1,15 +1,11 @@
 <script>
-	import '../app.css';
+	import '../app.scss';
+
+	import Header from '$lib/layout/Header.svelte'
 </script>
+
+<Header />
 
 <main>
 	<slot />
 </main>
-
-<style>
-	main {
-		max-width: 680px;
-		padding: 80px 20px;
-		margin: 0 auto;
-	}
-</style>

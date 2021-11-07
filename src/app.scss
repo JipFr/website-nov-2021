@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+:root {
+
+	--body: white;
+	--text: #191919;
+
+	--header-bg: #F3FCF8;
+	--header-text-link: #465C52;
+	--header-text-primary: black;
+}
+
+html, body {
+	margin: 0;
+}
+
+body {
+	background: var(--body);
+	color: var(--text);
+}
+
+body, input, textarea {
+	font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "segoe ui", Roboto, "helvetica neue", Arial, "noto sans", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol", "noto color emoji";;
+}
