@@ -9,16 +9,13 @@
 </script>
 
 <svelte:head>
-	<title>Jip Frijlink — home</title>
+	<title>Jip Frijlink</title>
 </svelte:head>
 
 <Container>
 	<h1>About me</h1>
 
-	<p class="paragraph">
-		Hello there! I am a full-stack web developer from the Netherlands. I know HTML, (S)CSS,
-		JavaScript and TypeScript, Node.js, and Vue.
-	</p>
+	<p class="paragraph">Hello there! I am a full-stack web developer from the Netherlands.</p>
 
 	<h2>Find me online</h2>
 
@@ -53,6 +50,7 @@
 		<TechItem title="HTML" subtitle="Level 3" iconSource="/img/tech/html.png" bg="#F3E9E6" />
 		<TechItem title="(S)CSS" subtitle="Level 3" iconSource="/img/tech/scss.png" bg="#fcd7ea" />
 	</div>
+
 	<Collapsible title="Explanation about levels">
 		<p class="paragraph">To categorise my knowledge, I have the following levels</p>
 
@@ -62,6 +60,35 @@
 			<li>I'm confident with this technology</li>
 		</ol>
 	</Collapsible>
+
+	<div class="two-cols">
+		<div>
+			<h2>Things I like</h2>
+			<ul>
+				<li>Svelte</li>
+				<li>Exploring my neighbourhood</li>
+				<li><a class="anchor" href="/cats">Cats</a></li>
+				<li>Movies & TV shows</li>
+				<li><a class="anchor" href="https://millmint.net/posts/" target="_blank">Vekllei</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Things I don't like</h2>
+			<ul>
+				<li>Cat haters</li>
+				<li>People who can't argue their opinions</li>
+				<li>
+					<a
+						class="anchor"
+						href="https://developer.mozilla.org/en-US/docs/Web/CSS/env()"
+						target="_blank"
+					>
+						Web apps that don't account for phones' safe area
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </Container>
 
 <style lang="scss">
@@ -70,5 +97,10 @@
 		grid-gap: 10px;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		margin: 20px 0;
+	}
+
+	.two-cols {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 </style>

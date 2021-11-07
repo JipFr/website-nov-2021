@@ -31,6 +31,9 @@
 </template>
 
 <style lang="scss" scoped>
+	details {
+		margin: 20px 0;
+	}
 	details:not([open]) svg {
 		transform: rotate(180deg);
 	}
