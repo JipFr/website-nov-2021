@@ -47,6 +47,7 @@
 			iconSource="/img/tech/typescript.svg"
 			bg="#deeeff"
 		/>
+		<TechItem title="Node.js" subtitle="Level 3" iconSource="/img/tech/nodejs.svg" bg="#ebf5e9" />
 		<TechItem title="Nuxt / Vue" subtitle="Level 3" iconSource="/img/tech/nuxt.png" bg="#EBF6F3" />
 		<TechItem title="Svelte" subtitle="Level 2" iconSource="/img/tech/svelte.svg" bg="#ffe8e0" />
 		<TechItem title="React" subtitle="Level 2" iconSource="/img/tech/react.svg" bg="#e8faff" />
