@@ -39,6 +39,8 @@
 		/>
 		<TechItem title="Node.js" subtitle="Level 3" iconSource="/img/tech/nodejs.svg" bg="#ebf5e9" />
 		<TechItem title="Nuxt / Vue" subtitle="Level 3" iconSource="/img/tech/nuxt.png" bg="#EBF6F3" />
+		<TechItem title="HTML" subtitle="Level 3" iconSource="/img/tech/html.png" bg="#F3E9E6" />
+		<TechItem title="(S)CSS" subtitle="Level 3" iconSource="/img/tech/scss.png" bg="#fcd7ea" />
 		<TechItem title="Svelte" subtitle="Level 2" iconSource="/img/tech/svelte.svg" bg="#ffe8e0" />
 		<TechItem title="React" subtitle="Level 2" iconSource="/img/tech/react.svg" bg="#e8faff" />
 		<TechItem
@@ -47,8 +49,6 @@
 			iconSource="/img/tech/tailwind.svg"
 			bg="#defaff"
 		/>
-		<TechItem title="HTML" subtitle="Level 3" iconSource="/img/tech/html.png" bg="#F3E9E6" />
-		<TechItem title="(S)CSS" subtitle="Level 3" iconSource="/img/tech/scss.png" bg="#fcd7ea" />
 	</div>
 
 	<Collapsible title="Explanation about levels">
