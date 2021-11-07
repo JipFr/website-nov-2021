@@ -7,11 +7,11 @@
 </script>
 
 <svelte:head>
-	<title>Testimonials — Jip Frijlink</title>
+	<title>Projects — Jip Frijlink</title>
 </svelte:head>
 
 <Container>
-	<h1>Testimonials</h1>
+	<h1>Projects</h1>
 
 	<p class="paragraph">This page is a to-do.</p>
 </Container>
