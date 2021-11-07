@@ -1,12 +1,12 @@
-
 :root {
-
 	--body: white;
-	--text: #465C52;
+	--text: #465c52;
 	--text-title: black;
 
-	--header-bg: #F3FCF8;
-	--header-text-link: #465C52;
+	--anchor: #1d9961;
+
+	--header-bg: #f3fcf8;
+	--header-text-link: #465c52;
 	--header-text-primary: black;
 }
 
@@ -22,7 +22,8 @@
 	}
 }
 
-html, body {
+html,
+body {
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 }
@@ -33,15 +34,23 @@ body {
 	margin-bottom: 100px;
 }
 
-body, input, textarea {
+body,
+input,
+textarea {
 	font-family: inherit;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	color: var(--text-title);
 }
 
 h2 {
+	margin-top: 50px;
+}
+
+.post h2 {
 	margin-top: 100px;
 }
 
@@ -56,6 +65,10 @@ p.paragraph {
 
 .post img {
 	max-width: 100%;
-	border: 1px solid #E0EBE6;
+	border: 1px solid #e0ebe6;
 	display: block;
+}
+
+a.anchor {
+	color: var(--anchor);
 }
