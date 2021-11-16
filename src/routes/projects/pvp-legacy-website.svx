@@ -14,4 +14,5 @@ I found a few designs online to serve as inspiration. They told me which they li
 
 The website is available on https://pvplegacy.net/
 
-![](/uploads/forums-pvplegacy-net_-2.png)![](/uploads/forums-pvplegacy-net_-1.png)
+![PvP Legacy website in light mode](/uploads/forums-pvplegacy-net_-2.png)
+![PvP Legacy website in dark mode](/uploads/forums-pvplegacy-net_-1.png)

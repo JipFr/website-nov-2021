@@ -16,8 +16,8 @@ Because their services will be both free and open source, they can exist long af
 
 I built the website based on [mrjvs](https://mrjvs.com)'s design for the project. It is available on https://pretendo.network
 
-![](/uploads/pretendo-network_-1.png)
+![Pretendo network home page](/uploads/pretendo-network_-1.png)
 
-![](https://i.imgur.com/fqzSZqY.png)
+![Pretendo progress page](https://i.imgur.com/fqzSZqY.png)
 
-![](/uploads/img_6535.PNG)
+![Various pages on mobile](/uploads/img_6535.PNG)

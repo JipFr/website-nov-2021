@@ -10,4 +10,5 @@ tech: Nuxt, Vue, SCSS, Node.js, MongoDB
 ---
 I wanted an easy way to keep track of my finances with manual control. I figured nothing existed that was exactly like I wanted it, so I built it!
 
-![](/uploads/img_1583.PNG)![](/uploads/img_1584.PNG)
+![Various screenshots of the app in light mode](/uploads/img_1583.PNG)
+![Various screenshots of the app in dark mode](/uploads/img_1584.PNG)
