@@ -5,6 +5,7 @@
 
 	--anchor: #1d9961;
 	--border: rgba(0, 0, 0, 0.1);
+	--img-border: #e0ebe6;
 	--content: #f8f9fa;
 	--content-highlight: #f5f7f9;
 
@@ -21,6 +22,7 @@
 
 		--border: rgba(255, 255, 255, 0.1);
 		--content: #1b1b1b;
+		--img-border: #1b1b1b;
 
 		--header-bg: #1b1b1b;
 		--header-text-primary: white;
@@ -80,7 +82,7 @@ p.paragraph,
 .post img:not([width]),
 .post-img {
 	max-width: 100%;
-	border: 1px solid #e0ebe6;
+	border: 1px solid var(--img-border);
 	display: block;
 	margin: 20px 0;
 }
