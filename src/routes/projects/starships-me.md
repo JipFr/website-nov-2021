@@ -4,7 +4,7 @@ description: starships.me is my blog about starships, built with Nuxt/Vue and Sa
 color: '#E3E3EC'
 date: 10 jan 2021
 icon: https://starships.me/icon.png
-icon-background: '#E3E3EC'
+iconBackground: '#E3E3EC'
 tech: Vue, Nuxt, Sanity, SCSS
 ---
 

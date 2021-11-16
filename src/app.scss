@@ -71,12 +71,13 @@ h1 {
 	margin-top: 80px;
 }
 
-p.paragraph {
+p.paragraph,
+.is-md-post p {
 	color: var(--text);
 	margin: 20px 0;
 }
 
-.post img,
+.post img:not([width]),
 .post-img {
 	max-width: 100%;
 	border: 1px solid #e0ebe6;
@@ -84,7 +85,8 @@ p.paragraph {
 	margin: 20px 0;
 }
 
-a.anchor {
+a.anchor,
+.is-md-post a {
 	color: var(--anchor);
 }
 

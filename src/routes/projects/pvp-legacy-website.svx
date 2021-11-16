@@ -4,7 +4,7 @@ description: I built PvP Legacy's website
 color: "#3FAFF0"
 date: 2021-04-12T22:00:00.000+00:00
 icon: "/uploads/kit-viewer-icon.png"
-icon-background: "#EFEFEF"
+iconBackground: "#EFEFEF"
 tech: Sapper, Svelte, SCSS, Forestry
 
 ---

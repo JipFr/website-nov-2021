@@ -4,7 +4,7 @@ description: Today is a no-distraction logger for Makerlog, a platform to track 
 color: '#00B77A'
 date: 23 may 2019
 icon: /assets/icons/today-icon.png
-icon-background: '#00B77A'
+iconBackground: '#00B77A'
 tech: Web
 ---
 

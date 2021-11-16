@@ -4,7 +4,7 @@ description: Sekolah was built to show a school schedule and grades.
 color: '#00ac8c'
 date: 27 may 2019
 icon: /assets/icons/sekolah-icon.png
-icon-background: '#00ac8c'
+iconBackground: '#00ac8c'
 tech: Web, Node.js
 ---
 

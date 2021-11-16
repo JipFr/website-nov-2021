@@ -5,7 +5,7 @@ description: DesignCourse is a YouTube channel with tutorials on UI/UX. This pla
 color: "#242B33"
 date: 2021-05-25T22:00:00Z
 icon: "/assets/icons/designcourse-icon.svg"
-icon-background: "#2C2C2C"
+iconBackground: "#2C2C2C"
 tech: Vue, Nuxt, Tailwind
 
 ---

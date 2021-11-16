@@ -5,7 +5,7 @@ description: Pretendo is an open source replacement for Nintendo's servers for b
 color: "#673DB6"
 date: 2021-05-25T22:00:00Z
 icon: "/uploads/pretendo-2x.png"
-icon-background: "#1B1F3B"
+iconBackground: "#1B1F3B"
 tech: Web, Node.js
 
 ---

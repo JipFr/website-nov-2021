@@ -4,7 +4,7 @@ description: HeliumArgon is a company made to help businesses, communities, and 
 color: '#EC008C'
 date: 29 jul 2020
 icon: /assets/icons/heliumargon-logo.svg
-icon-background: 'linear-gradient(to right, #EC008C, #00AEEF)'
+iconBackground: 'linear-gradient(to right, #EC008C, #00AEEF)'
 tech: Web
 ---
 

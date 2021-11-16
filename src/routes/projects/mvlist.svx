@@ -5,7 +5,7 @@ description: mvlist provides an easy way to keep track and rate movies you love 
 color: "#d04040"
 date: 2019-06-25T22:00:00Z
 icon: "/assets/icons/mvlist-icon.png"
-icon-background: "#d04040"
+iconBackground: "#d04040"
 tech: Web, Node.js
 
 ---

@@ -33,22 +33,22 @@
 
 <div class="list">
 	{#each projects as project}
-		<a href={`/${project.slug}`}>
+		<a href={`/projects/${project.slug}`}>
 			<Box doHover={true}>
-				<div class="box-inner" style={`--shadow-color: ${project.color || 'inherit'}`}>
+				<div class="box-inner" style={`--shadow-color: ${project.metadata.color || 'inherit'}`}>
 					<div class="core">
-						<h3 class="project-title">{project.title}</h3>
-						<p class="date">{getDate(project.date)}</p>
-						<p class="description">{project.description}</p>
+						<h3 class="project-title">{project.metadata.title}</h3>
+						<p class="date">{getDate(project.metadata.date)}</p>
+						<p class="description">{project.metadata.description}</p>
 						<p class="tech">
-							{#each project.tech.split(', ') as tech}
+							{#each project.metadata.tech.split(', ') as tech}
 								<TechTag {tech} />
 							{/each}
 						</p>
 					</div>
 					<aside class="box-aside">
-						<div class="icon-wrapper" style={`background: ${project['icon-background']}`}>
-							<img src={project.icon} alt />
+						<div class="icon-wrapper" style={`background: ${project.metadata['iconBackground']}`}>
+							<img src={project.metadata.icon} alt />
 						</div>
 					</aside>
 				</div>

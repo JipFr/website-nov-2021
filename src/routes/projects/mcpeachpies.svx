@@ -4,7 +4,7 @@ description: mcpeachpies' website. mcpeachpies makes Minecraft YouTube videos in
 color: '#F39E71'
 date: 29 jul 2020
 icon: /assets/icons/peach-icon.png
-icon-background: 'url(/assets/projects/mcpeachpies-banner.jpg); background-size: cover; background-position: center'
+iconBackground: 'url(/assets/projects/mcpeachpies-banner.jpg); background-size: cover; background-position: center'
 tech: Web, PHP
 ---
 
@@ -15,4 +15,4 @@ The website is available on [mcpeachpies.com](https://mcpeachpies.com)
 
 ![The home page](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/mcpeachpies-1.png)
 ![Datapack page](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/mcpeachpies-2.png)
-!["Skin viewer" tool](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/mcpeachpies-3.png)
+![Tool to view Minecraft skins](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/mcpeachpies-3.png)

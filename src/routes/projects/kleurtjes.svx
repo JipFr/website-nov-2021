@@ -4,7 +4,7 @@ description: kleurtj.es is an easy to way store, share, and copy colors. It even
 color: '#3d6a7b'
 date: 24 may 2020
 icon: /assets/empty.png
-icon-background: '#3d6a7b'
+iconBackground: '#3d6a7b'
 tech: Web, Node.js, MongoDB
 ---
 
@@ -25,4 +25,4 @@ The project's source code is available on [GitHub](https://github.com/jipfr/colo
 ![Jip's dashboard](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/kleurtjes.png)
 ![Marijn's dashboard](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/kleurtjes-3.png)
 ![Jip's collections](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/kleurtjes-1.png)
-![Collection for the "connect" website](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/kleurtjes-2.png)
+![Collection for the 'connect' website](https://raw.githubusercontent.com/JipFr/jipfr/master/projects/kleurtjes-2.png)

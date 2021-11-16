@@ -4,7 +4,7 @@ description: BSL is an easy to use grocery list that features intelligent sugges
 color: '#445396'
 date: 05 jan 2019
 icon: /assets/icons/bsl-icon.png
-icon-background: 'linear-gradient(to top, #445396, #6F83DD)'
+iconBackground: 'linear-gradient(to top, #445396, #6F83DD)'
 tech: Web, Node.js
 ---
 

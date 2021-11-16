@@ -4,7 +4,7 @@ description: Dash is a Tweetdeck-like client for Makerlog, a platform to track y
 color: '#00B77A'
 date: 23 may 2019
 icon: /assets/icons/dash-icon.png
-icon-background: 'linear-gradient(to top right, #00B780, #0AD99A)'
+iconBackground: 'linear-gradient(to top right, #00B780, #0AD99A)'
 tech: Web
 ---
 

@@ -4,7 +4,7 @@ description: Adolla is an easy-to-use web app to read manga. It features progres
 color: '#4babce'
 date: 23 aug 2020
 icon: https://raw.githubusercontent.com/JipFr/Adolla/master/public/icon.png
-icon-background: 'linear-gradient(to top, #4babce, #6ebdda)'
+iconBackground: 'linear-gradient(to top, #4babce, #6ebdda)'
 tech: Web, Node.js, TypeScript
 ---
 

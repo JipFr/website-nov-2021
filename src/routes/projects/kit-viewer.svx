@@ -5,7 +5,7 @@ description: PvP Legacy is a Minecraft server where you fight other players. Thi
 color: "#EFEFEF"
 date: 10 nov 2020
 icon: "/assets/icons/kit-viewer-icon.png"
-icon-background: "#efefef"
+iconBackground: "#efefef"
 tech: Web
 
 ---
