@@ -1,0 +1,21 @@
+---
+title: Contributions
+---
+
+These are the things I've contributed to projects that aren't quite worth a listing in "projects", but I thought were still worthy of being shared. On this page are also some smaller projects not worty of being shown in the project list.
+
+## Millmint.net
+
+Millmint is a website largely dedicated to the Vekllei project and its author, Hobart. I contributed a few things a few things to the website and in- and outside of Hacktoberfest.
+
+First, I added a small preview for search results. If the string you were looking for shows up in a post, it will show you what it found.
+
+![Search on the MillMint website. The query is 'Tzipora' and various results are shown with the represented string](/img/contributions/millmint/search.png)
+
+I was then in a voice call with the author of the website and Vekllei, and he asked if it would perhaps be possible to give each page a tint regarding to the featured image. Of course it is!
+
+![The tint is applied to the page from the featured image](/img/contributions/millmint/tint.png)
+
+After that, we gave the same treatment to all the stories' cards.
+
+![A list of stories' cards on the Millmint website, where each card has a slight tint in accordance to the color of the art piece](/img/contributions/millmint/cards.png)
