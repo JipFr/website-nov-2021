@@ -15,8 +15,6 @@
 </svelte:head>
 
 <Container>
-	<Hero />
-
 	<h1>About me</h1>
 	<p class="paragraph">
 		Hello there! I am a full-stack web developer from the Netherlands. I started in 2016, and since
@@ -125,6 +123,7 @@
 			</ul>
 		</div>
 	</div>
+	<Hero />
 </Container>
 
 <style lang="scss">
