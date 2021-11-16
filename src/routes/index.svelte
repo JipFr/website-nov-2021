@@ -16,7 +16,10 @@
 <Container>
 	<h1>About me</h1>
 
-	<p class="paragraph">Hello there! I am a full-stack web developer from the Netherlands.</p>
+	<p class="paragraph">
+		Hello there! I am a full-stack web developer from the Netherlands. I started in 2016, and since
+		then I've worked on countless projects, both for myself and for clients.
+	</p>
 
 	<h2>Find me online</h2>
 
