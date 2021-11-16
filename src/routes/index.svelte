@@ -35,19 +35,49 @@
 			title="TypeScript / JS"
 			subtitle="Level 3"
 			iconSource="/img/tech/typescript.svg"
-			bg="#deeeff"
+			bg="rgba(48, 122, 196, var(--bg-opacity))"
 		/>
-		<TechItem title="Node.js" subtitle="Level 3" iconSource="/img/tech/nodejs.svg" bg="#ebf5e9" />
-		<TechItem title="Nuxt / Vue" subtitle="Level 3" iconSource="/img/tech/nuxt.png" bg="#EBF6F3" />
-		<TechItem title="HTML" subtitle="Level 3" iconSource="/img/tech/html.png" bg="#F3E9E6" />
-		<TechItem title="(S)CSS" subtitle="Level 3" iconSource="/img/tech/scss.png" bg="#fcd7ea" />
-		<TechItem title="Svelte" subtitle="Level 2" iconSource="/img/tech/svelte.svg" bg="#ffe8e0" />
-		<TechItem title="React" subtitle="Level 2" iconSource="/img/tech/react.svg" bg="#e8faff" />
+		<TechItem
+			title="Node.js"
+			subtitle="Level 3"
+			iconSource="/img/tech/nodejs.svg"
+			bg="rgba(87, 157, 70, var(--bg-opacity))"
+		/>
+		<TechItem
+			title="Nuxt / Vue"
+			subtitle="Level 3"
+			iconSource="/img/tech/nuxt.png"
+			bg="rgba(37, 198, 145, var(--bg-opacity))"
+		/>
+		<TechItem
+			title="HTML"
+			subtitle="Level 3"
+			iconSource="/img/tech/html.png"
+			bg="rgba(225, 75, 43, var(--bg-opacity))"
+		/>
+		<TechItem
+			title="(S)CSS"
+			subtitle="Level 3"
+			iconSource="/img/tech/scss.png"
+			bg="rgba(202, 100, 153, var(--bg-opacity))"
+		/>
+		<TechItem
+			title="Svelte"
+			subtitle="Level 2"
+			iconSource="/img/tech/svelte.svg"
+			bg="rgba(253, 54, 18, var(--bg-opacity))"
+		/>
+		<TechItem
+			title="React"
+			subtitle="Level 2"
+			iconSource="/img/tech/react.svg"
+			bg="rgba(28, 218, 254, var(--bg-opacity))"
+		/>
 		<TechItem
 			title="Tailwind"
 			subtitle="Level 2"
 			iconSource="/img/tech/tailwind.svg"
-			bg="#defaff"
+			bg="rgba(25, 183, 211, var(--bg-opacity))"
 		/>
 	</div>
 

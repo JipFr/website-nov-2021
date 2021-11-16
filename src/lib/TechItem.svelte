@@ -23,6 +23,7 @@
 		grid-gap: 20px;
 		align-items: center;
 		border-radius: 6px;
+		--bg-opacity: 0.15;
 
 		img {
 			display: block;
@@ -42,12 +43,6 @@
 
 		.subtitle {
 			opacity: 0.6;
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.tech-item {
-			background-color: var(--header-bg) !important; // Override style attribute
 		}
 	}
 </style>
