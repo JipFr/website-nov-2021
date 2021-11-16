@@ -6,10 +6,11 @@
 	import Container from '$lib/layout/Container.svelte';
 	import TechItem from '$lib/TechItem.svelte';
 	import Collapsible from '$lib/util/Collapsible.svelte';
+	import Title from '$lib/util/Title.svelte';
 </script>
 
 <svelte:head>
-	<title>Jip Frijlink</title>
+	<Title />
 </svelte:head>
 
 <Container>

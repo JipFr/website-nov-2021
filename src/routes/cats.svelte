@@ -5,10 +5,11 @@
 <script>
 	import Container from '$lib/layout/Container.svelte';
 	import Collapsible from '$lib/util/Collapsible.svelte';
+	import Title from '$lib/util/Title.svelte';
 </script>
 
 <svelte:head>
-	<title>Cats — Jip Frijlink</title>
+	<Title title="Cats" />
 </svelte:head>
 
 <Container>

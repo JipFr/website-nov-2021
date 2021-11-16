@@ -4,12 +4,17 @@
 
 <script>
 	export let title;
+	export let description;
+
+	import Title from '$lib/util/Title.svelte';
 
 	import Container from '$lib/layout/Container.svelte';
+	import Description from '$lib/util/Description.svelte';
 </script>
 
 <svelte:head>
-	<title>Post — Jip Frijlink</title>
+	<Title {title} />
+	<Description {description} />
 </svelte:head>
 
 <Container>

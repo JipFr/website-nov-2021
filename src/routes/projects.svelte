@@ -4,6 +4,7 @@
 
 <script>
 	// Import modules
+	import Title from '$lib/util/Title.svelte';
 	import Container from '$lib/layout/Container.svelte';
 	import ProjectList from '$lib/ProjectList.svelte';
 
@@ -18,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Projects — Jip Frijlink</title>
+	<Title title="Projects" />
 </svelte:head>
 
 <Container>

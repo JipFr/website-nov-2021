@@ -3,11 +3,12 @@
 </script>
 
 <script>
+	import Title from '$lib/util/Title.svelte';
 	import Container from '$lib/layout/Container.svelte';
 </script>
 
 <svelte:head>
-	<title>Testimonials — Jip Frijlink</title>
+	<Title title="Testimonials" />
 </svelte:head>
 
 <Container>

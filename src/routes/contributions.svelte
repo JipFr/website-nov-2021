@@ -4,10 +4,11 @@
 
 <script>
 	import Container from '$lib/layout/Container.svelte';
+	import Title from '$lib/util/Title.svelte';
 </script>
 
 <svelte:head>
-	<title>Contributions — Jip Frijlink</title>
+	<Title title="Contributions" />
 </svelte:head>
 
 <Container>
