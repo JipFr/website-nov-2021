@@ -13,7 +13,6 @@ export async function getProjects() {
 				return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
 			});
 
-		console.log(mappedAndSortedProjects);
 		return mappedAndSortedProjects;
 	});
 }
