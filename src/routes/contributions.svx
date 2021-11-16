@@ -4,7 +4,17 @@ title: Contributions
 
 These are the things I've contributed to projects that aren't quite worth a listing in "projects", but I thought were still worthy of being shared. On this page are also some smaller projects not worty of being shown in the project list.
 
+## Build & Deploy a Personal Portfolio with TailwindCSS - 2022 Edition
+
+#### November 2021
+
+Having worked with me before, [Gary Simon](https://youtube.com/designcourse) asked me if I would be able to convert a design into code before the weekend, 3 days later. He sent me the designs, and I told him I could do it. The day after, on thursday night, I sent him the completed website.
+
+![A fictional designer's portfolio](/img/contributions/designcourse/portfolio-hostinger-2022.png)
+
 ## Millmint.net
+
+#### October 2021
 
 Millmint is a website largely dedicated to the Vekllei project and its author, Hobart. I contributed a few things a few things to the website and in- and outside of Hacktoberfest.
 
