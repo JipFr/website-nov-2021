@@ -5,6 +5,8 @@
 
 	--anchor: #1d9961;
 	--border: rgba(0, 0, 0, 0.1);
+	--content: #f8f9fa;
+	--content-highlight: #f5f7f9;
 
 	--header-bg: #f3fcf8;
 	--header-text-link: #465c52;
@@ -18,6 +20,7 @@
 		--text-title: #ffffff;
 
 		--border: rgba(255, 255, 255, 0.1);
+		--content: #1b1b1b;
 
 		--header-bg: #1b1b1b;
 		--header-text-primary: white;
@@ -35,6 +38,13 @@ body {
 	background: var(--body);
 	color: var(--text);
 	margin-bottom: 100px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
 }
 
 body,
@@ -76,4 +86,8 @@ p.paragraph {
 
 a.anchor {
 	color: var(--anchor);
+}
+
+[href='/adolla'] .icon-wrapper img {
+	filter: saturate(0) brightness(1.5);
 }

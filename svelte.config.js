@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
+import mdPlugin from 'vite-plugin-markdown';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,9 +12,12 @@ const config = {
 			fallback: null
 		}),
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		vite: {
+			plugins: [mdPlugin.default()]
+		}
 	},
-	preprocess: sveltePreprocess(),
+	preprocess: sveltePreprocess()
 };
 
 export default config;
