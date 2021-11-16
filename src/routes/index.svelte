@@ -7,6 +7,7 @@
 	import TechItem from '$lib/TechItem.svelte';
 	import Collapsible from '$lib/util/Collapsible.svelte';
 	import Title from '$lib/util/Title.svelte';
+	import Hero from '$lib/Hero.svelte';
 </script>
 
 <svelte:head>
@@ -14,8 +15,9 @@
 </svelte:head>
 
 <Container>
-	<h1>About me</h1>
+	<Hero />
 
+	<h1>About me</h1>
 	<p class="paragraph">
 		Hello there! I am a full-stack web developer from the Netherlands. I started in 2016, and since
 		then I've worked on countless projects, both for myself and for clients.
@@ -135,6 +137,7 @@
 
 	.two-cols {
 		display: grid;
+		grid-gap: 40px;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 </style>

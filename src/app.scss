@@ -1,4 +1,5 @@
 :root {
+	--theme: #457461;
 	--body: white;
 	--text: #465c52;
 	--text-title: black;
@@ -12,6 +13,8 @@
 	--header-bg: #f3fcf8;
 	--header-text-link: #465c52;
 	--header-text-primary: black;
+
+	--hero-bg: var(--theme);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +30,8 @@
 		--header-bg: #1b1b1b;
 		--header-text-primary: white;
 		--header-text-link: #bbb5b5;
+
+		--hero-bg: var(--content);
 	}
 }
 
@@ -94,4 +99,9 @@ a.anchor,
 
 [href='/projects/adolla'] .icon-wrapper img {
 	filter: saturate(0) brightness(1.5);
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
 }
