@@ -10,7 +10,7 @@ These are the things I've contributed to projects that aren't quite worth a list
 
 Having worked with me before, [Gary Simon](https://youtube.com/designcourse) asked me if I would be able to convert a design into code before the weekend, 3 days later. He sent me the designs, and I told him I could do it. The day after, on thursday night, I sent him the completed website.
 
-Gary then made a video walking through the design steps, explaining my code, and deploying on Hostinger [here](https://www.youtube.com/watch?v=_qQ-_X_Q-_Q).
+Gary then made a video walking through the design steps, explaining my code, and deploying on Hostinger [here](https://youtu.be/Vp6GC3jKG20).
 
 ![A fictional designer's portfolio](/img/contributions/designcourse/portfolio-hostinger-2022.png)
 
