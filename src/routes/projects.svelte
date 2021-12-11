@@ -7,7 +7,7 @@
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch, session, stuff }) {
 		const projects = await getProjects();
-		console.log(projects);
+
 		return {
 			props: {
 				projects
