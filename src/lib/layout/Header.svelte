@@ -20,8 +20,8 @@
 			<a sveltekit:prefetch class:active={$page.path === '/testimonials'} href="/testimonials">
 				Testimonials
 			</a>
-			<a sveltekit:prefetch class:active={$page.path === '/contributions'} href="/contributions">
-				Contributions
+			<a sveltekit:prefetch class:active={$page.path === '/other-work'} href="/other-work">
+				Other work
 			</a>
 		</nav>
 	</Container>

@@ -1,8 +1,8 @@
 ---
-title: Contributions
+title: Other work
 ---
 
-These are the things I've contributed to projects that aren't quite worth a listing in "projects", but I thought were still worthy of being shared. On this page are also some smaller projects not worty of being shown in the project list.
+This is some of the work I did not worth its own project on the projects page. This contains either open source work, freelance work, or smaller projects.
 
 ## Build & Deploy a Personal Portfolio with TailwindCSS - 2022 Edition
 
