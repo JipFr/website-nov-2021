@@ -1,5 +1,19 @@
 <script context="module">
+	// import utility functions
+	import { getProjects } from '../getProjects';
+
 	export const prerender = true;
+
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ page, fetch, session, stuff }) {
+		const projects = await getProjects();
+		console.log(projects);
+		return {
+			props: {
+				projects
+			}
+		};
+	}
 </script>
 
 <script>
@@ -7,15 +21,7 @@
 	import Title from '$lib/util/Title.svelte';
 	import Container from '$lib/layout/Container.svelte';
 	import ProjectList from '$lib/ProjectList.svelte';
-
-	// import utility functions
-	import { getProjects } from '../getProjects';
-
-	// Import all projects
-	let projects = [];
-	getProjects().then((p) => {
-		projects = p;
-	});
+	export let projects;
 </script>
 
 <svelte:head>
