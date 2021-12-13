@@ -6,16 +6,19 @@
 	export let title;
 	export let description;
 	export let left;
+	export let image;
 
 	import Title from '$lib/util/Title.svelte';
 
 	import Container from '$lib/layout/Container.svelte';
 	import Description from '$lib/util/Description.svelte';
+	import Image from '$lib/util/Image.svelte';
 </script>
 
 <svelte:head>
 	<Title {title} />
 	<Description {description} />
+	<Image {image} />
 </svelte:head>
 
 <Container>
