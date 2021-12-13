@@ -14,12 +14,13 @@
 		<!-- Navigation -->
 		<nav>
 			<a sveltekit:prefetch class:active={$page.path === '/'} href="/"> About </a>
+			<a sveltekit:prefetch class:active={$page.path === '/blog'} href="/blog"> Blog </a>
 			<a sveltekit:prefetch class:active={$page.path === '/projects'} href="/projects">
 				Projects
 			</a>
-			<a sveltekit:prefetch class:active={$page.path === '/testimonials'} href="/testimonials">
+			<!-- <a sveltekit:prefetch class:active={$page.path === '/testimonials'} href="/testimonials">
 				Testimonials
-			</a>
+			</a> -->
 			<a sveltekit:prefetch class:active={$page.path === '/other-work'} href="/other-work">
 				Other work
 			</a>

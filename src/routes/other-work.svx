@@ -1,5 +1,6 @@
 ---
 title: Other work
+left: true
 ---
 
 <script>

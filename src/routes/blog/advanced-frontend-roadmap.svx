@@ -1,0 +1,54 @@
+---
+title: 'Mildly advanced frontend: how to build the DesignCourse roadmap?'
+description: Various people have asked how to the roadmap section on the DesignCourse website, so here's an explanation.
+date: 13 dec 2021
+image: /uploads/designcourse-roadmap.png
+tags: Mildly advanced front-end, tech
+---
+
+<script>
+import Banner from '$lib/util/Banner.svelte'
+</script>
+
+The roadmap section on the [DesignCourse website](https://designcourse.com/) is a technological marvel, and since I've seen various people ask about it, I'll explain how to build it! We'll be using SCSS for this post.
+
+Starting of with the design, there's a few tough things in there.
+
+![DesignCourse roadmap](/uploads/designcourse-roadmap-full.png)
+
+The two challenges are as follows:
+
+- The background, which is a more complex shape and should extend beyond the container of the roadmap
+- The dotted lines between each point
+
+To get started, we'll want to make a basic layout container. Something to put all our content in.
+
+<iframe src="https://codepen.io/jipdev/embed/qBPRdWz" frameborder="0"></iframe>
+
+Now that we have a container, we can start adding content, including the dots. We'll use the `:nth-child` selector to select every even element (`> div:nth-child(even)`) to change the text alignment and show the relevant "dot".
+
+We give each dot some margin, and hide if it's on the wrong side of the odd/even child. We'll turn each dot into a circle, then add a shadow to give off the glow.
+
+We will also give the content of each item a max-width, so we can align it left or right at will through its parent.
+
+<iframe src="https://codepen.io/jipdev/embed/eYGgNvx" frameborder="0"></iframe>
+
+Then, it'll be made so the green dots are left-aligned on mobile. A simple media query overriding the dots' visibility will cover this.
+
+<iframe src="https://codepen.io/jipdev/embed/yLzgNKG" frameborder="0"></iframe>
+
+Alright, so we have our dots and our content in a nice layout. Now we'll want to add the background.
+
+The design shown at the very top of this post was made in Figma, and so was the background. It was made using various vectors and lines. Luckily, Figma has a tool to export these to a single SVG.
+
+For this instance we'll just use the SVG hosted on the designcourse.com domain: https://designcourse.com/textures/roadmap.svg.
+
+So we know the aspect ratio of the background. Now, it's time to actually make it into the background — but still let it go outside of the container. For this, we'll use a `::before`.
+
+To make it so it's properly positioned, we'll make the wrapper of the entire (full-width) container one that has a position that is `relative`. Then, we set the position of the background to `absolute`, make it full width, and add a padding-bottom of 134% to keep the aspect ratio.
+
+<Banner left="Note:"> I changed the media query into a lower max width so it displays nicely on the website.</Banner>
+
+<iframe src="https://codepen.io/jipdev/embed/vYegOVm" frameborder="0"></iframe>
+
+And that's that! It scales and everything!
