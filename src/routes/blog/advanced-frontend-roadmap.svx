@@ -10,7 +10,7 @@ tags: Mildly advanced front-end, tech
 import Banner from '$lib/util/Banner.svelte'
 </script>
 
-The roadmap section on the [DesignCourse website](https://designcourse.com/) is a technological marvel, and since I've seen various people ask about it, I'll explain how to build it! We'll be using SCSS for this post.
+The roadmap section on the website for the [DesignCourse | Learn UI / UX Design](https://designcourse.com/) course is a technological marvel, and since I've seen various people ask about it, I'll explain how to build it! We'll be using SCSS for this post.
 
 Starting of with the design, there's a few tough things in there.
 
