@@ -8,7 +8,7 @@
 <div class="list blog">
 	{#each blogPosts as blogPost}
 		<a href={`/blog/${blogPost.slug}`}>
-			<div>
+			<div class="content">
 				<h2>{blogPost.metadata.title}</h2>
 				<p>Posted on <strong>{getDate(blogPost.metadata.date)}</strong></p>
 				{#if blogPost.metadata.tags}
@@ -20,7 +20,7 @@
 				{/if}
 				<p>{blogPost.metadata.description}</p>
 			</div>
-			<div>
+			<div class="image">
 				<img src={blogPost.metadata.image} alt />
 			</div>
 		</a>
@@ -42,6 +42,7 @@
 		text-decoration: none;
 		display: grid;
 		grid-template-columns: 1fr 250px;
+		grid-template-areas: 'content image';
 		grid-gap: 40px;
 		padding: 20px;
 		border-bottom: 1px solid var(--border);
@@ -51,6 +52,13 @@
 
 		&:hover {
 			transform: scale(1.05);
+		}
+
+		.content {
+			grid-area: content;
+		}
+		.image {
+			grid-area: image;
 		}
 	}
 
@@ -85,5 +93,12 @@
 		height: 200px;
 		object-fit: cover;
 		border: 1px solid var(--border);
+	}
+
+	@media (max-width: 800px) {
+		.blog a {
+			grid-template-columns: 100%;
+			grid-template-areas: 'image' 'content';
+		}
 	}
 </style>

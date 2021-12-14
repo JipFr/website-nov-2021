@@ -72,4 +72,17 @@
 			}
 		}
 	}
+
+	@media (max-width: 800px) {
+		header nav {
+			display: flex;
+			overflow-x: auto;
+			width: calc(100% + 15vw);
+			padding-left: 7.5vw;
+			padding-right: 7.5vw;
+			margin-left: -7.5vw;
+			margin-right: -7.5vw;
+			white-space: nowrap;
+		}
+	}
 </style>

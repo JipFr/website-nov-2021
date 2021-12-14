@@ -66,5 +66,9 @@
 			text-align: left;
 			font-size: 1.2rem;
 		}
+		h2.date {
+			text-align: left;
+			font-size: 1rem;
+		}
 	}
 </style>
