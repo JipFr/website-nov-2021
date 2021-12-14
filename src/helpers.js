@@ -1,3 +1,14 @@
+// Other stuff
+const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+export function getDate(d) {
+	const dateObj = new Date(d);
+	const date = dateObj.getDate().toString().padStart(2, '0');
+	const month = months[dateObj.getMonth()];
+	const year = dateObj.getFullYear();
+	return `${date} ${month} ${year}`;
+}
+
 export async function getProjects() {
 	const t = import.meta.glob('./routes/projects/*.svx');
 

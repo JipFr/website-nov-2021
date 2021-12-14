@@ -2,29 +2,7 @@
 	// Props
 	export let blogPosts = [];
 
-	function getDate(d) {
-		const dateObj = new Date(d);
-		const date = dateObj.getDate().toString().padStart(2, '0');
-		const month = months[dateObj.getMonth()];
-		const year = dateObj.getFullYear();
-		return `${date} ${month} ${year}`;
-	}
-
-	// Other stuff
-	const months = [
-		'jan',
-		'feb',
-		'mar',
-		'apr',
-		'may',
-		'jun',
-		'jul',
-		'aug',
-		'sep',
-		'oct',
-		'nov',
-		'dec'
-	];
+	import { getDate } from '../helpers';
 </script>
 
 <div class="list blog">

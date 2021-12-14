@@ -1,6 +1,6 @@
 <script context="module">
 	// import utility functions
-	import { getBlogPosts } from '../getProjects';
+	import { getBlogPosts } from '../helpers';
 
 	export const prerender = true;
 

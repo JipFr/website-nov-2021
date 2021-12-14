@@ -1,6 +1,6 @@
 <script context="module">
 	// import utility functions
-	import { getProjects } from '../getProjects';
+	import { getProjects } from '../helpers';
 
 	export const prerender = true;
 
