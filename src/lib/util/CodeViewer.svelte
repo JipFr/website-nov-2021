@@ -85,7 +85,6 @@
 		} else if (lang === 'js') {
 			selectedCode = js;
 		}
-		console.log(selectedCode);
 	}
 </script>
 
@@ -225,9 +224,10 @@
 		}
 		.code-side {
 			--width: 100% !important;
+			display: block !important;
 		}
 		.mover {
-			display: none;
+			display: none !important;
 		}
 		.viewing-side {
 			border-top: 20px solid var(--body);
