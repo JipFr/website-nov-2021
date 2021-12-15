@@ -237,8 +237,8 @@
 			border-radius: 4px;
 
 			:global(iframe) {
-				height: 80vh;
-				border-radius: 4px;
+				height: 80vh !important;
+				border-radius: 6px;
 			}
 		}
 		.tabs {
