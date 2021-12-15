@@ -132,7 +132,8 @@
 		min-height: 500px;
 		margin: 30px 0;
 		border: 1px solid var(--border);
-		background: #282c34;
+		--code-bg: #282c34;
+		background: var(--code-bg);
 
 		.code-side {
 			width: var(--width);
@@ -172,13 +173,14 @@
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 10px;
 			padding: 10px;
+			background: var(--code-bg);
 
 			.tab {
 				padding: 5px 10px;
 				width: 100%;
 				cursor: pointer;
 				color: white;
-				background: #282c34;
+				background: var(--code-bg);
 				text-align: left;
 				display: flex;
 				flex-wrap: wrap;
@@ -204,6 +206,46 @@
 				&.active {
 					background: #121417;
 				}
+			}
+		}
+
+		:global(pre) {
+			margin: 0;
+			margin-top: 10px;
+			border-radius: 4px;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.code-viewer {
+			flex-wrap: wrap;
+			background: transparent;
+			border: 0;
+		}
+		.code-side {
+			--width: 100% !important;
+		}
+		.mover {
+			display: none;
+		}
+		.viewing-side {
+			border-top: 20px solid var(--body);
+			width: 100%;
+			opacity: 1 !important;
+			max-height: 80vh !important;
+			border-radius: 4px;
+
+			:global(iframe) {
+				height: 80vh;
+				border-radius: 4px;
+			}
+		}
+		.tabs {
+			border-radius: 4px;
+
+			.tab {
+				padding: 10px;
+				border-radius: 4px;
 			}
 		}
 	}
