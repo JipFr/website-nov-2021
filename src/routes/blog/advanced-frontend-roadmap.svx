@@ -10,6 +10,982 @@ tags: Mildly advanced front-end, tech
 import Banner from '$lib/util/Banner.svelte'
 import QuestionsAndConcerns from '$lib/util/QuestionsAndConcerns.svelte'
 import BackLink from '$lib/util/BackLink.svelte'
+import CodeViewer from '$lib/util/CodeViewer.svelte'
+
+const editor1 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <h1>This is my base layout. It's nice and centered! The max width is not super big, but it'll suffice.</h1>    
+  </div>
+</main>
+`,
+css: `body {
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+main {
+  width: 100%;
+}
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}`
+}
+
+const editor2 = {
+	html: `<main>
+
+  <div class="roadmap-container">
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>`,
+css: `body {
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+main {
+  width: 100%;
+}
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #00e472;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e472;
+}
+.left-dot {
+  margin-right: 40px;
+}
+.right-dot {
+  margin-left: 40px;
+}
+
+.item-wrapper {
+  max-width: 300px;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+.content > .item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.content > .item:nth-child(even) .right-dot {
+  display: none;
+}
+.content > .item:nth-child(odd) .left-dot {
+  display: none;
+}`
+}
+
+const editor3 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>`,
+css: `body {
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+main {
+  width: 100%;
+}
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #00e472;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e472;
+}
+.left-dot {
+  margin-right: 40px;
+}
+.right-dot {
+  margin-left: 40px;
+}
+
+.item-wrapper {
+  max-width: 300px;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+.content > .item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.content > .item:nth-child(even) .right-dot {
+  display: none;
+}
+.content > .item:nth-child(odd) .left-dot {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .content > .item .left-dot {
+    display: block !important;
+  }
+  .content > .item .right-dot {
+    display: none;
+  }
+  .content > .item:nth-child(even) {
+    justify-content: flex-start;
+  }
+}`
+}
+
+const editor4 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>`,
+css: `body {
+  font-family: Arial;
+  background: #181818;
+  color: white;
+}
+main {
+  width: 100%;
+}
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #00e472;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e472;
+}
+.left-dot {
+  margin-right: 40px;
+}
+.right-dot {
+  margin-left: 40px;
+}
+
+.item-wrapper {
+  max-width: 300px;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+.content > .item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.content > .item:nth-child(even) .right-dot {
+  display: none;
+}
+.content > .item:nth-child(odd) .left-dot {
+  display: none;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 134%;
+  background-image: url("https://designcourse.com/textures/roadmap.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .content > .item .left-dot {
+    display: block !important;
+  }
+  .content > .item .right-dot {
+    display: none;
+  }
+  .content > .item:nth-child(even) {
+    justify-content: flex-start;
+  }
+}`
+}
+
+const editor5 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <canvas></canvas>
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>`,
+css: `body {
+  font-family: Arial;
+  background: #181818;
+  color: white;
+}
+main {
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #00e472;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e472;
+}
+.left-dot {
+  margin-right: 40px;
+}
+.right-dot {
+  margin-left: 40px;
+}
+
+.item-wrapper {
+  max-width: 300px;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+.content > .item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.content > .item:nth-child(even) .right-dot {
+  display: none;
+}
+.content > .item:nth-child(odd) .left-dot {
+  display: none;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 134%;
+  background-image: url("https://designcourse.com/textures/roadmap.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .content > .item .left-dot {
+    display: block !important;
+  }
+  .content > .item .right-dot {
+    display: none;
+  }
+  .content > .item:nth-child(even) {
+    justify-content: flex-start;
+  }
+}`,
+js: `function doRoadmapLines() {
+  const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
+    (dotElement) => {
+      return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots
+    }
+  );
+
+  // Get canvas element
+  const canvas = document.querySelector("canvas");
+  canvas.width = canvas.scrollWidth;
+  canvas.height = canvas.scrollHeight;
+  const ctx = canvas.getContext("2d");
+
+  // Loop over dots, draw lines
+
+  const canvasBox = canvas.getBoundingClientRect();
+
+  for (let i = 0; i < visibleDots.length; i++) {
+    const dot = visibleDots[i];
+    const dotPosition = getOffset(dot, canvasBox);
+
+    // Draw a red dot
+    ctx.beginPath();
+    ctx.arc(
+      dotPosition.left + dotPosition.width / 2,
+      dotPosition.top + dotPosition.height / 2,
+      50,
+      0,
+      2 * Math.PI
+    );
+    ctx.fillStyle = "red";
+    ctx.fill();
+  }
+}
+
+doRoadmapLines();
+window.addEventListener("resize", doRoadmapLines);
+
+function getOffset(el, offset = {}) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left - (offset.left || 0),
+    top: rect.top - (offset.top || 0),
+    width: rect.width || el.offsetWidth,
+    height: rect.height || el.offsetHeight
+  };
+}`
+}
+
+const editor6 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <canvas></canvas>
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="item-content">This is my div</div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`,
+css: `body {
+  font-family: Arial;
+  background: #181818;
+  color: white;
+}
+main {
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 800px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  --color: #00e472;
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color);
+}
+.item:nth-child(3) .dot {
+  --color: red;
+}
+
+.left-dot {
+  margin-right: 40px;
+}
+.right-dot {
+  margin-left: 40px;
+}
+
+.item-wrapper {
+  max-width: 300px;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+.content > .item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.content > .item:nth-child(even) .right-dot {
+  display: none;
+}
+.content > .item:nth-child(odd) .left-dot {
+  display: none;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 134%;
+  background-image: url("https://designcourse.com/textures/roadmap.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .content > .item .left-dot {
+    display: block !important;
+  }
+  .content > .item .right-dot {
+    display: none;
+  }
+  .content > .item:nth-child(even) {
+    justify-content: flex-start;
+  }
+}
+`,
+js: `function doRoadmapLines() {
+  const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
+    (dotElement) => {
+      return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots
+    }
+  );
+
+  // Get canvas element
+  const canvas = document.querySelector("canvas");
+  canvas.width = canvas.scrollWidth;
+  canvas.height = canvas.scrollHeight;
+  const ctx = canvas.getContext("2d");
+
+  // Loop over dots, draw lines
+
+  const canvasBox = canvas.getBoundingClientRect();
+
+  for (let i = 0; i < visibleDots.length; i++) {
+    const dot = visibleDots[i];
+    const nextDot = visibleDots[i + 1];
+
+    if (nextDot) {
+      // Find the position of the current and next dot
+      const dotPosition = getOffset(dot, canvasBox);
+      const nextDotPosition = getOffset(nextDot, canvasBox);
+
+      // Draw the line
+      ctx.beginPath();
+
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = getComputedStyle(dot).backgroundColor;
+
+      ctx.moveTo(
+        dotPosition.left + dotPosition.width / 2,
+        dotPosition.top + dotPosition.height / 2
+      );
+      ctx.lineTo(
+        nextDotPosition.left + nextDotPosition.width / 2,
+        nextDotPosition.top + nextDotPosition.height / 2
+      );
+      ctx.setLineDash([15, 15]);
+
+      ctx.stroke();
+    }
+  }
+}
+
+doRoadmapLines();
+window.addEventListener("resize", doRoadmapLines);
+
+function getOffset(el, offset = {}) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left - (offset.left || 0),
+    top: rect.top - (offset.top || 0),
+    width: rect.width || el.offsetWidth,
+    height: rect.height || el.offsetHeight
+  };
+}
+`
+}
+
+const editor7 = {
+	html: `<main>
+  <div class="roadmap-container">
+    <div class="content">
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-wrapper">
+          <div class="dot left-dot"></div>
+          <div class="dot right-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<canvas></canvas>`,
+css: `body {
+  font-family: Arial;
+  background: #181818;
+  color: white;
+  min-height: 500vh;
+  position: relative;
+}
+main {
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.roadmap-container {
+  width: 80%;
+  margin: 60px auto;
+  max-width: 300px;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  --color: #00e472;
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color);
+}
+.item:nth-child(3) .dot {
+  --color: red;
+}
+
+.item-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content > .item {
+  display: flex;
+  justify-content: flex-start;
+  color: gray;
+  margin: 90px 0;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 134%;
+  background-image: url("https://designcourse.com/textures/roadmap.svg");
+  background-size: cover;
+  z-index: -1;
+}`,
+js: `function doRoadmapLines() {
+  const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
+    (dotElement) => {
+      return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots
+    }
+  );
+
+  // Get canvas element
+  const canvas = document.querySelector("canvas");
+  canvas.width = canvas.scrollWidth;
+  canvas.height = canvas.scrollHeight;
+  const ctx = canvas.getContext("2d");
+
+  // Loop over dots, draw lines
+
+  const canvasBox = canvas.getBoundingClientRect();
+
+  for (let i = 0; i < visibleDots.length; i++) {
+    const dot = visibleDots[i];
+    const nextDot = visibleDots[i + 1];
+
+    if (nextDot) {
+      // Find the position of the current and next dot
+      const dotPosition = getOffset(dot, canvasBox);
+      const nextDotPosition = getOffset(nextDot, canvasBox);
+
+      // Draw the line
+      ctx.beginPath();
+
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = getComputedStyle(dot).backgroundColor;
+
+      ctx.moveTo(
+        dotPosition.left + dotPosition.width / 2,
+        dotPosition.top + dotPosition.height / 2
+      );
+      ctx.lineTo(
+        nextDotPosition.left + nextDotPosition.width / 2,
+        nextDotPosition.top + nextDotPosition.height / 2
+      );
+      ctx.setLineDash([15, 15]);
+
+      ctx.stroke();
+    }
+  }
+}
+
+doRoadmapLines();
+window.addEventListener("resize", doRoadmapLines);
+
+function getOffset(el, offset = {}) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left - (offset.left || 0),
+    top: rect.top - (offset.top || 0),
+    width: rect.width || el.offsetWidth,
+    height: rect.height || el.offsetHeight
+  };
+}
+
+document.addEventListener("mousemove", (evt) => {
+  const dots = document.querySelectorAll(".dot");
+  let dot = dots[dots.length - 1];
+
+  const canvas = document.querySelector("canvas");
+  const canvasBox = canvas.getBoundingClientRect();
+  console.log(evt.clientY);
+
+  dot.style.position = "absolute";
+  dot.style.left = evt.clientX - canvasBox.left - dot.scrollHeight / 2 + "px";
+  dot.style.top = evt.clientY - canvasBox.top - dot.scrollWidth / 2 + "px";
+
+  doRoadmapLines();
+});`
+}
+
 </script>
 
 The roadmap section on the website for the [DesignCourse | Learn UI / UX Design](https://designcourse.com/) course is a technological marvel, and since I've seen various people ask about it, I'll explain how to build it! We'll be using SCSS for this post.
@@ -25,7 +1001,7 @@ The two challenges are as follows:
 
 To get started, we'll want to make a basic layout container. Something to put all our content in.
 
-<iframe src="https://codepen.io/jipdev/embed/qBPRdWz" title="" frameborder="0"></iframe>
+<CodeViewer html={editor1.html} css={editor1.css} />
 
 Now that we have a container, we can start adding content, including the dots. We'll use the `:nth-child` selector to select every even element (`> div:nth-child(even)`) to change the text alignment and show the relevant "dot".
 
@@ -33,11 +1009,11 @@ We give each dot some margin, and hide if it's on the wrong side of the odd/even
 
 We will also give the content of each item a max-width, so we can align it left or right at will through its parent.
 
-<iframe src="https://codepen.io/jipdev/embed/eYGgNvx" title="" frameborder="0"></iframe>
+<CodeViewer html={editor2.html} css={editor2.css} />
 
 Then, it'll be made so the green dots are left-aligned on mobile. A simple media query overriding the dots' visibility will cover this.
 
-<iframe src="https://codepen.io/jipdev/embed/yLzgNKG" title="" frameborder="0"></iframe>
+<CodeViewer html={editor3.html} css={editor3.css} />
 
 Alright, so we have our dots and our content in a nice layout. Now we'll want to add the background.
 
@@ -51,7 +1027,7 @@ To make it so it's properly positioned, we'll make the wrapper of the entire (fu
 
 <Banner left="Note:"> I changed the media query into a lower max width so it displays nicely on the website.</Banner>
 
-<iframe src="https://codepen.io/jipdev/embed/vYegOVm" title="" frameborder="0"></iframe>
+<CodeViewer html={editor4.html} css={editor4.css} />
 
 And that's that! It scales and everything!
 
@@ -131,7 +1107,7 @@ for (let i = 0; i < visibleDots.length; i++) {
 }
 ```
 
-<iframe src="https://codepen.io/jipdev/embed/MWEJGdQ" title="" frameborder="0"></iframe>
+<CodeViewer html={editor5.html} css={editor5.css} js={editor5.js} />
 
 Look ma, no hands! Now there's a large red dot behind each green one to show the canvas logic works.
 
@@ -153,13 +1129,13 @@ ctx.strokeStyle = getComputedStyle(dot).backgroundColor;
 
 We'll make one dot red to showcase how it takes the color of the dot to draw the line to the next dot.
 
-<iframe src="https://codepen.io/jipdev/embed/NWadzez" title="" frameborder="0"></iframe>
+<CodeViewer html={editor6.html} css={editor6.css} js={editor6.js} />
 
 There you go! It works on mobile mobile and desktop, and changes on resize.
 
 Just to show it can draw the line anywhere within the canvas' reach, I've made a demo where you can move a dot around.
 
-<iframe src="https://codepen.io/jipdev/embed/abLpjbv" title="" frameborder="0"></iframe>
+<CodeViewer html={editor7.html} css={editor7.css} js={editor7.js} />
 
 <Banner left="Note:"> For this demo I moved the canvas outside of the main component and set the body's min height to 500vh, so the canvas is always taller than the content. You don't usually want to do this.</Banner>
 

@@ -164,14 +164,13 @@
 	}
 	.viewing-side :global(iframe) {
 		width: 100%;
-		height: 100%;
+		height: 100% !important;
 	}
 
 	.code-side {
 		.tabs {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 10px;
+			display: flex;
+			gap: 10px;
 			padding: 10px;
 			background: var(--code-bg);
 
@@ -190,12 +189,14 @@
 					display: block;
 					width: 1.2rem;
 					height: 1.2rem;
+					margin: 0;
 					margin-right: 10px;
+					border: 0;
 				}
 
 				span {
 					display: block;
-					margin-top: 5px;
+					margin: 5px 0;
 					min-width: 50px;
 				}
 
