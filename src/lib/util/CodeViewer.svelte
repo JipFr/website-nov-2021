@@ -67,11 +67,19 @@
 		fromRight = containerWidth - codeWidth;
 
 		if (mouseIsDown) {
-			if (
-				(evt.movementX > 0 && evt.clientX > codeViewer.querySelector('.mover').offsetLeft + 20) ||
-				(evt.movementX < 0 && evt.clientX < codeViewer.querySelector('.mover').offsetLeft + 20)
-			) {
-				codeWidth = Math.min(Math.max(codeWidth + evt.movementX, 0), containerWidth);
+			if (evt.movementX) {
+				if (
+					(evt.movementX > 0 && evt.clientX > codeViewer.querySelector('.mover').offsetLeft + 20) ||
+					(evt.movementX < 0 && evt.clientX < codeViewer.querySelector('.mover').offsetLeft + 20)
+				) {
+					codeWidth = Math.min(Math.max(codeWidth + evt.movementX, 0), containerWidth);
+				}
+			} else {
+				// Touch
+				codeWidth = Math.min(
+					Math.max(evt.touches[0].clientX - codeViewer.getBoundingClientRect().left - 20, 0),
+					containerWidth
+				);
 			}
 		}
 	}
@@ -88,7 +96,7 @@
 	}
 </script>
 
-<svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} />
+<svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} on:touchmove={onMouseMove} />
 
 <div class="code-viewer" bind:this={codeViewer}>
 	<div class="code-side" style={`--width: ${codeWidth}px; ${codeWidth < 250 && 'display: none;'}`}>
@@ -114,7 +122,13 @@
 		</div>
 		<Code code={selectedCode} {lang} />
 	</div>
-	<div class="mover" on:mousedown={onMouseDown} on:mouseup={onMouseUp} />
+	<div
+		class="mover"
+		on:mousedown={onMouseDown}
+		on:touchstart={onMouseDown}
+		on:mouseup={onMouseUp}
+		on:touchend={onMouseDown}
+	/>
 	<div
 		class="viewing-side"
 		bind:this={iframeWrapper}

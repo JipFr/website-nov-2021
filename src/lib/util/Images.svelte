@@ -7,7 +7,6 @@
 	onMount(() => {
 		const zooming = new Zooming({
 			onBeforeOpen: (el) => {
-				console.log(el);
 				el.style.height = 'auto';
 			},
 			onBeforeClose: (el) => {

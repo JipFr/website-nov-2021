@@ -976,7 +976,6 @@ document.addEventListener("mousemove", (evt) => {
 
   const canvas = document.querySelector("canvas");
   const canvasBox = canvas.getBoundingClientRect();
-  console.log(evt.clientY);
 
   dot.style.position = "absolute";
   dot.style.left = evt.clientX - canvasBox.left - dot.scrollHeight / 2 + "px";

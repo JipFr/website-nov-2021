@@ -1,6 +1,5 @@
 <script>
 	import { browser } from '$app/env';
-	console.log(browser);
 
 	let canvas;
 	let head;
