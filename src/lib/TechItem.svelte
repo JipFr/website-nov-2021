@@ -40,9 +40,8 @@
 		.title {
 			font-weight: bold;
 		}
-
 		.subtitle {
-			opacity: 0.6;
+			color: var(--secondary-title);
 		}
 	}
 </style>
