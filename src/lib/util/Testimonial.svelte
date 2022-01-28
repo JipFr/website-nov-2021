@@ -12,7 +12,7 @@
 		<div>
 			<img class="profile-picture" src={profilePicture} alt />
 			<h2>{name}</h2>
-			<p>
+			<p class="description">
 				<slot />
 			</p>
 		</div>
@@ -75,6 +75,20 @@
 
 		p {
 			margin-top: 0.9rem;
+		}
+
+		.description {
+			position: relative;
+
+			&::before {
+				content: '“';
+				font-family: sans-serif;
+				opacity: 0.1;
+				font-size: 144px;
+				position: absolute;
+				top: -40px;
+				left: -20px;
+			}
 		}
 	}
 
