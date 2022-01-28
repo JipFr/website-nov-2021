@@ -6,6 +6,6 @@ title: Testimonials
 import Testimonials from '$lib/Testimonials.svelte'
 </script>
 
-What people are saying about me and my work...
+Over my web development career I've had the pleasure of working with various clients — here's what they have to say:
 
 <Testimonials />
