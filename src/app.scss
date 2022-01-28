@@ -20,17 +20,17 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--body: #202328;
-		--text: #929292;
+		--body: #161925;
+		--text: #a8abbd;
 		--text-title: #ffffff;
 		--secondary-title: rgba(255, 255, 255, 0.6);
 
 		--border: rgba(255, 255, 255, 0.1);
-		--content: #1b1b1b;
+		--content: #13141f;
 		--content-highlight: #131313;
 		--img-border: #1b1b1b;
 
-		--header-bg: #1b1b1b;
+		--header-bg: #12131f;
 		--header-text-primary: white;
 		--header-text-link: #bbb5b5;
 
@@ -97,7 +97,7 @@ p.paragraph,
 }
 
 a.anchor,
-.is-md-post a {
+.is-md-post a[href] {
 	color: var(--anchor);
 }
 

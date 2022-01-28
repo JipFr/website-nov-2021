@@ -1,0 +1,11 @@
+---
+title: Testimonials
+---
+
+<script>
+import Testimonials from '$lib/Testimonials.svelte'
+</script>
+
+What people are saying about me and my work...
+
+<Testimonials />

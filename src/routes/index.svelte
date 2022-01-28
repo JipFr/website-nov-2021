@@ -24,12 +24,12 @@
 	<h2>Find me online</h2>
 
 	<p class="paragraph">
-		I have a GitHub account where I share many of my projects at <a
+		I have a GitHub account that can be found on <a
 			href="https://github.com/jipfr"
 			target="_blank"
-			class="anchor">@jipfr</a
+			class="anchor">github.com/jipfr</a
 		>. You can e-mail me at
-		<a class="anchor" href="mailto:contact@jipfr.nl" target="_blank">contact@jipfr.nl</a>.
+		<a class="anchor" href="mailto:jip@frij.link" target="_blank">jip@frij.link</a>.
 	</p>
 
 	<h2>I have experience with</h2>
@@ -138,5 +138,8 @@
 		display: grid;
 		grid-gap: 40px;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	ul {
+		margin-top: 10px;
 	}
 </style>
