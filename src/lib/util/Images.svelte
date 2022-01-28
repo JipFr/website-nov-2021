@@ -34,7 +34,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		grid-gap: 10px;
 
-		:global(img) {
+		:global(img.img-zoomable) {
 			margin: 0;
 			width: 100%;
 			height: 200px;
