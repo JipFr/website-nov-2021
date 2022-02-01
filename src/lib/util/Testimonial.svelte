@@ -103,6 +103,7 @@
 		}
 		.testimonial {
 			background: var(--content);
+			border-radius: 16px;
 		}
 	}
 
