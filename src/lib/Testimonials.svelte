@@ -47,7 +47,7 @@
 	<Testimonial
 		wide
 		name="mcpeachpies"
-		profilePicture="https://yt3.ggpht.com/ytc/AKedOLTISEVCZBZUgLUCkHZZLhH6G_GyJQrVufX1e91tcw=s900-c-k-c0x00ffffff-no-rj"
+		profilePicture="/uploads/mcpeachpies.jpg"
 		background="https://github.com/mcpeachpies/mcpeachpies-website/raw/master/banner.jpg"
 		links={[
 			{

@@ -20,10 +20,7 @@
 			<p>
 				From
 				{#each Object.entries(links) as [i, link]}
-					{i == links.length - 1 ? ' and ' : ''}
-					{#if i === links.length - 1}
-						and{' '}
-					{/if}
+					{i == links.length - 1 && i > 0 ? ' and ' : ''}
 					<a href={link.to}>{link.text}</a>{#if i < links.length - 2},{/if}
 				{/each}
 			</p>
