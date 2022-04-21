@@ -1,14 +1,18 @@
 ---
 title: Budget
 description: I made my own app to keep track of finances
-color: "#457461"
-date: 2021-02-02T23:00:00Z
-icon: "/uploads/icon-full-white.png"
-iconBackground: "#457461"
+color: '#457461'
+date: 2022-01-31T23:00:00Z
+icon: '/uploads/icon-full-white.png'
+iconBackground: '#457461'
 tech: Nuxt, Vue, SCSS, Node.js, MongoDB
-
 ---
-I wanted an easy way to keep track of my finances with manual control. I figured nothing existed that was exactly like I wanted it, so I built it!
 
-![Various screenshots of the app in light mode](/uploads/img_1583.PNG)
-![Various screenshots of the app in dark mode](/uploads/img_1584.PNG)
+More than a year ago, I was looking for a way to keep track of my money. My demands were specific as usual, and nothing like my desired app existed. As such, I built it myself!
+
+![](https://i.imgur.com/Va5ndXt.png)
+![](https://i.imgur.com/ZYYJhlP.png)
+![](https://i.imgur.com/s7LOhRJ.png)
+![](https://i.imgur.com/saygazT.png)
+![](https://i.imgur.com/9EtyFY3.png)
+![](https://i.imgur.com/Di1XpdC.png)
