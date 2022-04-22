@@ -1,9 +1,9 @@
 ---
-title: Budget
+title: Krab Bij Kas
 description: I made my own app to keep track of finances
 color: '#457461'
 date: 2022-01-31T23:00:00Z
-icon: '/uploads/icon-full-white.png'
+icon: '/uploads/krab.png'
 iconBackground: '#457461'
 tech: Nuxt, Vue, SCSS, Node.js, MongoDB
 ---

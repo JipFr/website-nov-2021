@@ -10,22 +10,19 @@ export function getDate(d) {
 }
 
 export async function getProjects() {
-	const t = import.meta.glob('./routes/projects/*.svx');
+	const t = import.meta.globEager('./routes/projects/*.svx');
 
-	return await Promise.all(Object.entries(t).map(async (v) => [v[0], await v[1]()])).then((p) => {
-		const mappedAndSortedProjects = p
-			.map((v) => {
-				return {
-					slug: v[0].split('/').pop().replace('.svx', ''),
-					...v[1]
-				};
-			})
-			.sort((a, b) => {
-				return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
-			});
-
-		return mappedAndSortedProjects;
-	});
+	const projects = Object.entries(t)
+		.map((v) => {
+			return {
+				slug: v[0].split('/').pop().replace('.svx', ''),
+				...v[1]
+			};
+		})
+		.sort((a, b) => {
+			return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+		});
+	return projects;
 }
 
 export async function getBlogPosts() {
