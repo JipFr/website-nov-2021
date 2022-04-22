@@ -95,6 +95,14 @@
 		</ol>
 	</Collapsible>
 
+	<p class="paragraph flex">
+		<img
+			class="web-century"
+			src="/uploads/web-century.png"
+			alt="Selected website of the century"
+		/>*
+	</p>
+
 	<div class="two-cols">
 		<div>
 			<h2>Things I like</h2>
@@ -124,6 +132,10 @@
 		</div>
 	</div>
 	<Hero />
+
+	<p class="paragraph">
+		* The afforementioned web experts are the 3 spiders in the corner of my room.
+	</p>
 </Container>
 
 <style lang="scss">
@@ -141,5 +153,14 @@
 	}
 	ul {
 		margin-top: 10px;
+	}
+	.web-century {
+		width: 100%;
+		max-width: 300px;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+	}
+	.flex {
+		display: flex;
 	}
 </style>
