@@ -3,6 +3,9 @@
 </script>
 
 <script>
+	import { onMount } from 'svelte';
+	import Zooming from 'zooming';
+
 	export let title;
 	export let description;
 	export let left;
@@ -16,7 +19,6 @@
 	import Container from '$lib/layout/Container.svelte';
 
 	import { getDate } from '../../helpers';
-	import { onMount } from 'svelte';
 
 	function updateAnchors() {
 		if (typeof document !== 'undefined') {
@@ -28,7 +30,18 @@
 		}
 	}
 
-	onMount(updateAnchors);
+	function updateZooming() {
+		const zooming = new Zooming({
+			bgColor: 'var(--body)'
+		});
+		console.log(1);
+		zooming.listen('.post img');
+	}
+
+	onMount(() => {
+		updateAnchors();
+		updateZooming();
+	});
 </script>
 
 <svelte:head>
