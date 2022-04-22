@@ -1,0 +1,15 @@
+---
+title: Existence SMP
+description: I designed and built a new website for the Existence Minecraft survival multiplayer.
+color: '#ffaa00'
+date: 19 mar 2022
+icon: /assets/icons/existence.svg
+iconBackground: '#ffaa00'
+tech: Web, Svelte, SvelteKit
+---
+
+Wanting to try out some more SvelteKit, so I decided to build a new website for Existence SMP. I collaborated with [iGalaxy](https://igalaxy.dev/) to add some cool features.
+
+You can check out the website over at https://existencesmp.com/
+
+![Existence home page](/uploads/existence-0.png)

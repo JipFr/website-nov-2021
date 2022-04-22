@@ -16,6 +16,19 @@
 	import Container from '$lib/layout/Container.svelte';
 
 	import { getDate } from '../../helpers';
+	import { onMount } from 'svelte';
+
+	function updateAnchors() {
+		if (typeof document !== 'undefined') {
+			document.querySelectorAll('.post a').forEach((a) => {
+				if (!a.getAttribute('href').startsWith('/')) {
+					a.setAttribute('target', '_blank');
+				}
+			});
+		}
+	}
+
+	onMount(updateAnchors);
 </script>
 
 <svelte:head>
