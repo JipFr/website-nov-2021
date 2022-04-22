@@ -134,7 +134,7 @@
 	<Hero />
 
 	<p class="paragraph">
-		* The afforementioned web experts are the 3 spiders in the corner of my room.
+		* The aforementioned web experts are the 3 spiders in the corner of my room.
 	</p>
 </Container>
 

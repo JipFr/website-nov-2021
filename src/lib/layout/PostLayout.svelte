@@ -21,7 +21,7 @@
 	function updateAnchors() {
 		if (typeof document !== 'undefined') {
 			document.querySelectorAll('.post a').forEach((a) => {
-				if (!a.getAttribute('href').startsWith('/')) {
+				if (a && a.getAttribute('href') && !a.getAttribute('href').startsWith('/')) {
 					a.setAttribute('target', '_blank');
 				}
 			});

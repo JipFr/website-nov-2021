@@ -5,7 +5,7 @@ color: '#ffaa00'
 date: 19 mar 2022
 icon: /assets/icons/existence.svg
 iconBackground: '#ffaa00'
-tech: Web, Svelte, SvelteKit
+tech: Web, Svelte, SCSS
 ---
 
 Wanting to try out some more SvelteKit, so I decided to build a new website for Existence SMP. I collaborated with [iGalaxy](https://igalaxy.dev/) to add some cool features.
