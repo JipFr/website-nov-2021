@@ -6,6 +6,7 @@ date: 2022-01-31T23:00:00Z
 icon: '/uploads/krab.png'
 iconBackground: '#457461'
 tech: Nuxt, Vue, SCSS, Node.js, MongoDB
+featured: true
 ---
 
 More than a year ago, I was looking for a way to keep track of my money. My demands were specific as usual, and nothing like my desired app existed. As such, I built it myself!

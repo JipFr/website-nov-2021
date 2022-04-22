@@ -1,5 +1,19 @@
 <script context="module">
+	// import utility functions
+	import { getProjects } from '../helpers';
+
 	export const prerender = true;
+
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load() {
+		const projects = await getProjects();
+
+		return {
+			props: {
+				projects: projects.filter((v) => v.metadata.featured)
+			}
+		};
+	}
 </script>
 
 <script>
@@ -8,6 +22,9 @@
 	import Collapsible from '$lib/util/Collapsible.svelte';
 	import Title from '$lib/util/Title.svelte';
 	import Hero from '$lib/Hero.svelte';
+	import ProjectList from '$lib/ProjectList.svelte';
+
+	export let projects;
 </script>
 
 <svelte:head>
@@ -31,6 +48,19 @@
 		>. You can e-mail me at
 		<a class="anchor" href="mailto:jip@frij.link" target="_blank">jip@frij.link</a>.
 	</p>
+
+	<h2>Featured projects</h2>
+
+	<p class="paragraph">
+		These are some of my recent projects worth showcasing. To check out all of them, <a
+			class="anchor"
+			href="/projects"
+		>
+			click here!
+		</a>
+	</p>
+
+	<ProjectList {projects} />
 
 	<h2>I have experience with</h2>
 

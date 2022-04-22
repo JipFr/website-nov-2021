@@ -5,7 +5,7 @@
 	export const prerender = true;
 
 	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ page, fetch, session, stuff }) {
+	export async function load() {
 		const projects = await getProjects();
 
 		return {
