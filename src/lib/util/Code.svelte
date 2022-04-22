@@ -5,7 +5,6 @@
 	export let lang;
 
 	$: highlighted = Prism.highlight(code, Prism.languages[lang], lang);
-	console.log(code, highlighted);
 </script>
 
 <pre class={`language-${lang}`}>
