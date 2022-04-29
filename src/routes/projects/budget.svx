@@ -11,9 +11,9 @@ featured: true
 
 More than a year ago, I was looking for a way to keep track of my money. My demands were specific as usual, and nothing like my desired app existed. As such, I built it myself!
 
-![](https://i.imgur.com/Va5ndXt.png)
-![](https://i.imgur.com/ZYYJhlP.png)
-![](https://i.imgur.com/s7LOhRJ.png)
-![](https://i.imgur.com/saygazT.png)
-![](https://i.imgur.com/9EtyFY3.png)
-![](https://i.imgur.com/Di1XpdC.png)
+![Index page featuring list of transactions](https://i.imgur.com/Va5ndXt.png)
+![Categories page showing all categories and the money handled under them](https://i.imgur.com/ZYYJhlP.png)
+![Recurring payments](https://i.imgur.com/s7LOhRJ.png)
+![Overview page with a chart for each category](https://i.imgur.com/saygazT.png)
+![Prices scatter plot](https://i.imgur.com/9EtyFY3.png)
+![Mobile views of all pages](https://i.imgur.com/Di1XpdC.png)
