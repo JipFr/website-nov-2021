@@ -34,7 +34,6 @@
 		const zooming = new Zooming({
 			bgColor: 'var(--body)'
 		});
-		console.log(1);
 		zooming.listen('.post img');
 	}
 

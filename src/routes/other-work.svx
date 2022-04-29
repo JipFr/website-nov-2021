@@ -48,7 +48,7 @@ First, I added a small preview for search results. If the string you were lookin
 
 I was then in a voice call with the author of the website and Vekllei, and he asked if it would perhaps be possible to give each page a tint regarding to the featured image. Of course it is!
 
-![The tint is applied to the page from the featured image](/img/contributions/millmint/tint.png)
+![The tint is applied to the page from the featured post](/img/contributions/millmint/tint.png)
 
 After that, we gave the same treatment to all the stories' cards.
 
