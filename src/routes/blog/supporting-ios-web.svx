@@ -1,0 +1,66 @@
+---
+title: "Adding support for iOS' safe areas in your web app"
+description: Making your web app work well on iOS is something that comes with a couple considerations not many web developers apply.
+date: 30 apr 2022
+image: /uploads/ios-safari.png
+tags: front-end, tech
+---
+
+<script>
+import Banner from '$lib/util/Banner.svelte'
+import QuestionsAndConcerns from '$lib/util/QuestionsAndConcerns.svelte'
+import BackLink from '$lib/util/BackLink.svelte'
+</script>
+
+![Difference between having these things and not having these things](/uploads/ios-safari.png)
+
+Hello there, person reading this!
+
+Chances are you found this page through me, sending you this very post since you did it wrong. Please allow me to apologize for my future self being a jerk.
+
+I only did it to make your website or web app better!
+
+When building a web app you'd like to support on Safari (and you should!), there are several things you should consider in making it a nice experience for your users. I'll run them down, and what to do in order to make it the best it can be.
+
+## Add a safe area for your footer
+
+Something I often see is apps not adding in a safe area for their footer. This causes the content of the footer to be shown behind the white bar iOS and iPadOS use for navigation, which makes it harder for users to tap your links or use your footer.
+
+Luckily, Safari has an easy remedy. You can use `env` functions in CSS to get the amount of space you need for your footer to be easily usable on iOS. Depending on if your footer is floating at the bottom detached from the sides or not, you'll want to add either some padding, or to add more margin from the bottom. This is doable through `env(safe-area-inset-bottom)`.
+
+Be careful with your box-sizing, as it can mess up your design if you add too much bottom padding without considering the height 😎
+
+A simple solution to a footer would look like this:
+
+```css
+footer {
+	/* ... other footer styling... */
+	padding: 0.5rem;
+	padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+}
+```
+
+Compare these screenshots of the difference between having and not having the safe area on your footer:
+
+![Footer with safe area](/uploads/footer-with-safe-area.jpg)
+![Footer without safe area](/uploads/footer-without-safe-area.jpg)
+
+Not having a safe area makes your app a lot harder to use for your users, in addition to making your app look cheap.
+
+## Adding a safe are to your header
+
+If your site or app is going to be used in standalone, you should add a safe area to your header. Using `env(safe-area-inset-top)` is the value that is the height of the notch, unless there are other elements above your elements.
+
+For example: if you have a browser header above the notch, `env(safe-area-inset-top)` will be `0` since the browser's top bar is already taking care of that safe area.
+
+If you don't have a traditional header, consider adding an extra element that's only the height of the safe area, with a nice background.
+
+Compare these screenshots:
+
+![Header with safe area](/uploads/has-header.jpg)
+![No header](/uploads/no-header.jpg)
+
+Be sure to also make it so your content is offset from the safe area. If you don't, your content might become hard to read since the status bar's content might overlap with your content.
+
+<QuestionsAndConcerns />
+<BackLink href="/blog">Back to blog</BackLink>
