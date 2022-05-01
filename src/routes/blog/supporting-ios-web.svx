@@ -20,7 +20,7 @@ Chances are you found this page through me, sending you this very post since you
 
 I only did it to make your website or web app better!
 
-When building a web app you'd like to support on Safari (and you should!), there are several things you should consider in making it a nice experience for your users. I'll run them down, and what to do in order to make it the best it can be.
+When building a web app you'd like to support on Safari (and you should!), you should add a safe area to your header, your footer, and also your content.
 
 ## Add a safe area for your footer
 
@@ -62,5 +62,30 @@ Compare these screenshots:
 
 Be sure to also make it so your content is offset from the safe area. If you don't, your content might become hard to read since the status bar's content might overlap with your content.
 
+## Making your site look good in landscape mode
+
+By default, iOS just "crops" your website in order not to make it full width. There are, however, various situations where you want your `body` to be your screen's full width. To make your site take the full width in landscape mode on iOS, you need to add `viewport-fit=cover` to your `viewport` meta tag, like so:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+```
+
+You should also be sure your content is always visible and accessible. If you don't your content could very well appear behind the notch.
+
+For this, you can use `env(safe-area-inset-left)` and `env(safe-area-inset-right)` to get the safe area for each side. You can use this the same way as you did the other values.
+
+Be careful in just mindlessly adding this. If you add it without thought, it's possible elements that should be full width (like a background image for your hero, or a border on the bottom of your header) will not be anymore, and that will look cheap.
+
+A short explanation about this can be found on [CSS Tricks](https://css-tricks.com/the-notch-and-css/).
+
+![With/without this consideration](https://i0.wp.com/css-tricks.com/wp-content/uploads/2017/09/iphonex-safari.png?ssl=1)
+
+## Adding a theme color
+
+You should also add a theme color to your site. This is a color that is used to change the color of the status bar on iOS. Under certain `status-bar` types (it's possible to make it transparent, but it's not by default), the status bar will also change color to match the theme color.
+
+I won't write too much on this, but you can check out [this post on useyourloaf.com](https://useyourloaf.com/blog/safari-15-theme-color/) for more on this.
+
 <QuestionsAndConcerns />
 <BackLink href="/blog">Back to blog</BackLink>
+```
