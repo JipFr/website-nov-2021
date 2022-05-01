@@ -3,7 +3,7 @@ title: 'Mildly advanced frontend: how to build the DesignCourse roadmap?'
 description: Various people have asked how to the roadmap section on the DesignCourse website, so here's an explanation.
 date: 13 dec 2021
 image: /uploads/designcourse-roadmap.png
-tags: Mildly advanced front-end, tech
+tags: Mildly advanced front-end, Tech
 ---
 
 <script>

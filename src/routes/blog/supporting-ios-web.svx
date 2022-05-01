@@ -3,7 +3,7 @@ title: "Adding support for iOS' safe areas in your web app"
 description: Making your web app work well on iOS is something that comes with a couple considerations not many web developers apply.
 date: 30 apr 2022
 image: /uploads/ios-safari.png
-tags: front-end, tech
+tags: Front-end, Tech
 ---
 
 <script>
