@@ -103,9 +103,11 @@
 
 <svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} on:touchmove={onMouseMove} />
 
-<div class="no-script">
-	<p>To view this code, you need to enable JavaScript.</p>
-</div>
+<noscript>
+	<div class="no-script">
+		<p>To view this code, you need to enable JavaScript.</p>
+	</div>
+</noscript>
 
 <div class="code-viewer hidden" bind:this={codeViewer}>
 	<div class="code-side" style={`--width: ${codeWidth}px; ${codeWidth < 250 && 'display: none;'}`}>
