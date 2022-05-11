@@ -1,5 +1,6 @@
 <script>
 	import Code from '$lib/util/Code.svelte';
+	import { onMount } from 'svelte';
 
 	export let html = '';
 	export let css = '';
@@ -94,11 +95,19 @@
 			selectedCode = js;
 		}
 	}
+
+	onMount(() => {
+		codeViewer.classList.remove('hidden');
+	});
 </script>
 
 <svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} on:touchmove={onMouseMove} />
 
-<div class="code-viewer" bind:this={codeViewer}>
+<div class="no-script">
+	<p>To view this code, you need to enable JavaScript.</p>
+</div>
+
+<div class="code-viewer hidden" bind:this={codeViewer}>
 	<div class="code-side" style={`--width: ${codeWidth}px; ${codeWidth < 250 && 'display: none;'}`}>
 		<div class="tabs">
 			{#if html}
@@ -139,6 +148,24 @@
 </div>
 
 <style lang="scss">
+	.no-script {
+		width: 100%;
+		padding: 30px;
+		border-radius: 6px;
+		background: var(--content);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		box-sizing: border-box;
+
+		img {
+			width: 70%;
+		}
+	}
+	.hidden {
+		display: none;
+	}
 	.code-viewer {
 		display: flex;
 		width: 100%;
