@@ -164,7 +164,7 @@
 		}
 	}
 	.hidden {
-		display: none;
+		display: none !important;
 	}
 	.code-viewer {
 		display: flex;
