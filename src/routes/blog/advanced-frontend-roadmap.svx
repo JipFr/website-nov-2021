@@ -13,13 +13,15 @@ import BackLink from '$lib/util/BackLink.svelte'
 import CodeViewer from '$lib/util/CodeViewer.svelte'
 
 const editor1 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <h1>This is my base layout. It's nice and centered! The max width is not super big, but it'll suffice.</h1>    
   </div>
 </main>
 `,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: black;
   color: white;
@@ -35,8 +37,8 @@ main {
 }
 
 const editor2 = {
-	html: `<main>
-
+	html: `
+<main>
   <div class="roadmap-container">
     <div class="content">
       <div class="item">
@@ -84,7 +86,8 @@ const editor2 = {
     </div>
   </div>
 </main>`,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: black;
   color: white;
@@ -142,7 +145,8 @@ main {
 }
 
 const editor3 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <div class="content">
       <div class="item">
@@ -190,7 +194,8 @@ const editor3 = {
     </div>
   </div>
 </main>`,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: black;
   color: white;
@@ -260,7 +265,8 @@ main {
 }
 
 const editor4 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <div class="content">
       <div class="item">
@@ -308,7 +314,8 @@ const editor4 = {
     </div>
   </div>
 </main>`,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: #181818;
   color: white;
@@ -393,7 +400,8 @@ main::before {
 }
 
 const editor5 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <canvas></canvas>
     <div class="content">
@@ -442,7 +450,8 @@ const editor5 = {
     </div>
   </div>
 </main>`,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: #181818;
   color: white;
@@ -534,7 +543,8 @@ main::before {
     justify-content: flex-start;
   }
 }`,
-js: `function doRoadmapLines() {
+js: `
+function doRoadmapLines() {
   const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
     (dotElement) => {
       return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots
@@ -584,7 +594,8 @@ function getOffset(el, offset = {}) {
 }
 
 const editor6 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <canvas></canvas>
     <div class="content">
@@ -634,7 +645,8 @@ const editor6 = {
   </div>
 </main>
 `,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: #181818;
   color: white;
@@ -732,7 +744,8 @@ main::before {
   }
 }
 `,
-js: `function doRoadmapLines() {
+js: `
+function doRoadmapLines() {
   const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
     (dotElement) => {
       return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots
@@ -795,7 +808,8 @@ function getOffset(el, offset = {}) {
 }
 
 const editor7 = {
-	html: `<main>
+	html: `
+<main>
   <div class="roadmap-container">
     <div class="content">
       <div class="item">
@@ -839,7 +853,8 @@ const editor7 = {
 </main>
 
 <canvas></canvas>`,
-css: `body {
+css: `
+body {
   font-family: Arial;
   background: #181818;
   color: white;
@@ -910,7 +925,8 @@ main::before {
   background-size: cover;
   z-index: -1;
 }`,
-js: `function doRoadmapLines() {
+js: `
+function doRoadmapLines() {
   const visibleDots = Array.from(document.querySelectorAll(".item .dot")).filter(
     (dotElement) => {
       return dotElement.scrollWidth > 0 && dotElement.scrollHeight > 0; // Only return visible dots

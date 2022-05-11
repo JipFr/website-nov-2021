@@ -254,8 +254,8 @@
 
 		:global(pre) {
 			margin: 0;
-			margin-top: 10px;
 			border-radius: 4px;
+			padding-top: 0;
 		}
 	}
 
