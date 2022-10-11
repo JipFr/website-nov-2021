@@ -96,6 +96,12 @@
 			bg="rgba(202, 100, 153, var(--bg-opacity))"
 		/>
 		<TechItem
+			title="Tailwind"
+			subtitle="Level 3"
+			iconSource="/img/tech/tailwind.svg"
+			bg="rgba(25, 183, 211, var(--bg-opacity))"
+		/>
+		<TechItem
 			title="Svelte"
 			subtitle="Level 2"
 			iconSource="/img/tech/svelte.svg"
@@ -106,12 +112,6 @@
 			subtitle="Level 2"
 			iconSource="/img/tech/react.svg"
 			bg="rgba(28, 218, 254, var(--bg-opacity))"
-		/>
-		<TechItem
-			title="Tailwind"
-			subtitle="Level 2"
-			iconSource="/img/tech/tailwind.svg"
-			bg="rgba(25, 183, 211, var(--bg-opacity))"
 		/>
 	</div>
 

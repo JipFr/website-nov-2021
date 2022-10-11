@@ -1,0 +1,19 @@
+---
+title: 'DesignCourse: CSS course'
+description: In anticipation of DesignCourse's new CSS course, I was hired to build a new home page and a landing page for the CSS course.
+color: '#242B33'
+date: 2022-10-05T00:00:00Z
+icon: '/assets/icons/designcourse-icon.svg'
+iconBackground: '#2C2C2C'
+tech: Vue, Nuxt, SCSS
+featured: true
+---
+
+Find the original project post [here](/projects/designcourse).
+
+Find part 2 [here](/projects/designcourse-2).
+
+In anticipation of DesignCourse's new CSS course, I was hired to build a new home page and a landing page for the CSS course. They can be found at https://designcourse.com and https://designcourse.com/css respectively.
+
+![New home page](/uploads/new-designcourse-landing.png)
+![CSS landing page](/uploads/designcourse-css.png)

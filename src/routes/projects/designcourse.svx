@@ -12,7 +12,7 @@ featured: true
 
 This is the front-end I built for DesignCourse. I was given a design by Gary Simon ([as seen on stream](https://www.youtube.com/watch?v=TEQjTVJLk2c)) and tasked to build it in Vue.js
 
-At the time of writing it hasn't been released, but you can sign up to be notified when it is [here](https://designcourse.com).
+You can check out the course and the website [here](https://designcourse.com/ui-ux/).
 
 Also mentioned [here](https://youtu.be/QJ_euqBsN44?t=50)!
 
