@@ -5,6 +5,15 @@ left: true
 
 This is some of the work I did not worth its own project on the projects page. This contains either open source work, freelance work, or smaller projects.
 
+## Millmint: Table of Contents
+
+#### October 2022
+
+Eager to get in some contributions for 2022's Hacktoberfest, I went to Millmint's webmaster again to ask if he had any work for me — and he did! Together, we built a table of contents that looks good, scales down to a dropdown on mobile, and
+
+![Lola post with a table of contents on the right-hand side](/img/contributions/millmint/lola-toc.png)
+![Video showcasing the table of contents](/img/contributions/millmint/toc.mov)
+
 ## Build & Deploy a Personal Portfolio with TailwindCSS - 2022 Edition
 
 #### November 2021
