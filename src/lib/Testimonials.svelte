@@ -16,6 +16,10 @@
 			{
 				to: '/projects/designcourse-2',
 				text: 'DesignCourse part 2'
+			},
+			{
+				to: '/projects/designcourse-3',
+				text: 'DesignCourse: CSS course'
 			}
 		]}
 	>
