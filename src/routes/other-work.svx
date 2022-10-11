@@ -3,10 +3,6 @@ title: Other work
 left: true
 ---
 
-<script>
-	import Images from '$lib/util/Images.svelte'
-</script>
-
 This is some of the work I did not worth its own project on the projects page. This contains either open source work, freelance work, or smaller projects.
 
 ## Build & Deploy a Personal Portfolio with TailwindCSS - 2022 Edition
@@ -17,24 +13,10 @@ Having worked with me before, [Gary Simon](https://youtube.com/designcourse) ask
 
 Gary then made a video walking through the design steps, explaining my code, and deploying on Hostinger [here](https://youtu.be/Vp6GC3jKG20).
 
-<Images images={[
-{
-src: '/img/contributions/designcourse/hostinger-hero.png',
-alt: 'Hero section of the portfolio'
-},
-{
-src: '/img/contributions/designcourse/hostinger-work.png',
-alt: 'Work section of the portfolio'
-},
-{
-src: '/img/contributions/designcourse/hostinger-clients.png',
-alt: 'Clients section of the portfolio'
-},
-{
-src: '/img/contributions/designcourse/hostinger-hire.png',
-alt: 'Hiring/contact section of the portfolio'
-}
-]} />
+![Hero section of the portfolio](/img/contributions/designcourse/hostinger-hero.png)
+![Work section of the portfolio](/img/contributions/designcourse/hostinger-work.png)
+![Clients section of the portfolio](/img/contributions/designcourse/hostinger-clients.png)
+![Hiring/contact section of the portfolio](/img/contributions/designcourse/hostinger-hire.png)
 
 ## Millmint.net
 

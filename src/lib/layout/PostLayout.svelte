@@ -34,7 +34,7 @@
 		const zooming = new Zooming({
 			bgColor: 'var(--body)'
 		});
-		zooming.listen('.post img');
+		zooming.listen('.post img:not(.profile-picture)');
 	}
 
 	onMount(() => {
