@@ -31,7 +31,7 @@ Gary then made a video walking through the design steps, explaining my code, and
 
 #### October 2021
 
-Millmint is a website largely dedicated to the Vekllei project and its author, Hobart. I contributed a few things a few things to the website and in- and outside of Hacktoberfest.
+Millmint is a website largely dedicated to the Vekllei project and its author, Hobart. I contributed a few things a few things to the website, both in- and outside of Hacktoberfest.
 
 First, I added a small preview for search results. If the string you were looking for shows up in a post, it will show you what it found.
 
