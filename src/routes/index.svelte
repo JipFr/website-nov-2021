@@ -141,7 +141,7 @@
 				<li>Exploring my neighbourhood</li>
 				<li><a class="anchor" href="/cats">Cats</a></li>
 				<li>Movies & TV shows</li>
-				<li><a class="anchor" href="https://millmint.net/posts/" target="_blank">Vekllei</a></li>
+				<li><a class="anchor" href="https://millmint.net/" target="_blank">Vekllei</a></li>
 			</ul>
 		</div>
 		<div>
