@@ -1,0 +1,16 @@
+---
+title: 'DesignCourse: Mentor page'
+description: To better market Mentor for DesignCourse's UI/UX course, a dedicated page was needed — and I built it!
+color: '#242B33'
+date: 2022-11-15T00:00:00Z
+icon: '/assets/icons/designcourse-icon.svg'
+iconBackground: '#2C2C2C'
+tech: Vue, Nuxt, SCSS
+featured: true
+---
+
+Find the original project post [here](/projects/designcourse), part 2 [here](/projects/designcourse-2), and my work on the CSS page [here](/projects/designcourse-3).
+
+To better market Mentor for DesignCourse's UI/UX course, a dedicated page was needed — and I built it! I used Gary Simon's design, which he created [here](https://youtu.be/wy3mE8otWKM).
+
+![Mentor page](/uploads/designcourse-mentor.png)
