@@ -166,6 +166,12 @@
 	<p class="paragraph">
 		* The aforementioned web experts are the 3 spiders in the corner of my room.
 	</p>
+
+	<p
+		style="color: var(--arc-palette-title, transparent); background: var(--arc-palette-background, transparent); pointer-events: none; user-select: none;"
+	>
+		Aha! A fellow Arc user. I see you there...
+	</p>
 </Container>
 
 <style lang="scss">
