@@ -1,0 +1,16 @@
+---
+title: 'DesignCourse: Coaching page'
+description: To share information about the coaching product of DesignCourse, a page needed to be built — and I was just the man to do it!
+color: '#242B33'
+date: 2023-01-17T00:00:00Z
+icon: '/assets/icons/designcourse-icon.svg'
+iconBackground: '#2C2C2C'
+tech: Vue, Nuxt, SCSS
+featured: true
+---
+
+Find the original project post [here](/projects/designcourse), part 2 [here](/projects/designcourse-2), and my work on the CSS page [here](/projects/designcourse-3). My work on the mentor page can be viewed [here](/projects/designcourse-4).
+
+To promote DesignCourse's coaching product, a dedicated page was needed — and I built it! I used Gary Simon's design for this, and you can view the final result on https://designcourse.com/coaching.
+
+![Mentor page](/uploads/designcourse-coaching.png)
