@@ -20,6 +20,14 @@
 			{
 				to: '/projects/designcourse-3',
 				text: 'DesignCourse: CSS course'
+			},
+			{
+				to: '/projects/designcourse-4',
+				text: 'DesignCourse: Mentor'
+			},
+			{
+				to: '/projects/designcourse-5',
+				text: 'DesignCourse: Coaching'
 			}
 		]}
 	>
