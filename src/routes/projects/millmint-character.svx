@@ -4,7 +4,7 @@ description: After contributing various cool features to Hobart's site, we decid
 color: '#242B33'
 date: 2023-02-23T00:00:00Z
 icon: '/assets/icons/millmint-icon.png'
-iconBackground: '#F0CA4E'
+iconBackground: '#fdcc28'
 tech: JS
 featured: true
 ---
@@ -14,6 +14,8 @@ After working on Project MillMint's website with Hobart many times before, we de
 The rendering / exporting was the largest problem. I ran into various cases where the browser would run out of memory, or it would limit canvas memory. In one case we were using the `html-to-canvas` to export the HTML-based character markup to a PNG, only for it to return a PNG where half of the layers were invisible on Safari.
 
 You can try out the project at https://millmint.net/dolls.
+
+Some of my other work for Millmint can be found on the "other work" page, [here](/other-work)
 
 ![Character creator, doll with red hair](/uploads/millmint-dolls-01.png)
 ![Character created with the character creator](/uploads/millmint-character.png)
