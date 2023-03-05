@@ -9,10 +9,9 @@ This is some of the work I did not worth its own project on the projects page. T
 
 #### October 2022
 
-Eager to get in some contributions for 2022's Hacktoberfest, I went to Millmint's webmaster again to ask if he had any work for me — and he did! Together, we built a table of contents that looks good, scales down to a dropdown on mobile, and
+Eager to get in some contributions for 2022's Hacktoberfest, I went to Millmint's webmaster again to ask if he had any work for me — and he did! Together, we built a table of contents that looks good, scales down to a dropdown on mobile, and highlights the currently active section. To check out the ToC in action, you can either watch a video [here](https://youtu.be/Z6urob9IsHc) or check it out yourself on any number of pages like https://millmint.net/utopia/vekllei/. Click the book icon in the header to open the toc.
 
 ![Lola post with a table of contents on the right-hand side](/img/contributions/millmint/lola-toc.png)
-![Video showcasing the table of contents](/img/contributions/millmint/toc.mov)
 
 ## Build & Deploy a Personal Portfolio with TailwindCSS - 2022 Edition
 
