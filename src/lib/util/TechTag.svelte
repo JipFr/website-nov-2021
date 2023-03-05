@@ -18,6 +18,11 @@
 			background: rgba(0, 150, 135, 0.15);
 		}
 
+		&[data-tech='JS'] {
+			color: #554d13;
+			background: rgba(236, 220, 104, 0.2);
+		}
+
 		&[data-tech='Vue'],
 		&[data-tech='Nuxt'] {
 			color: #42b983;

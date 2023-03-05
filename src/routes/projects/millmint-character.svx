@@ -1,0 +1,25 @@
+---
+title: 'MillMint: Create-A-Character'
+description: After contributing various cool features to Hobart's site, we decided to build a character creator together.
+color: '#242B33'
+date: 2023-02-23T00:00:00Z
+icon: '/assets/icons/millmint-icon.png'
+iconBackground: '#F0CA4E'
+tech: JS
+featured: true
+---
+
+After working on Project MillMint's website with Hobart many times before, we decided on Discord to see if we could build a character creator together. It was a fairly tough challenge with many road-blocks and problems, but in the end it came out really cool.
+
+The rendering / exporting was the largest problem. I ran into various cases where the browser would run out of memory, or it would limit canvas memory. In one case we were using the `html-to-canvas` to export the HTML-based character markup to a PNG, only for it to return a PNG where half of the layers were invisible on Safari.
+
+You can try out the project at https://millmint.net/dolls.
+
+![Character creator, doll with red hair](/uploads/millmint-dolls-01.png)
+![Character created with the character creator](/uploads/millmint-character.png)
+![Character created with the character creator](/uploads/millmint-character-1.png)
+![Character created with the character creator](/uploads/millmint-character-2.png)
+![Character created with the character creator](/uploads/millmint-character-3.png)
+![Character created with the character creator](/uploads/millmint-character-4.png)
+![Character created with the character creator](/uploads/millmint-character-5.png)
+![Character created with the character creator](/uploads/millmint-profile-picture.png)
