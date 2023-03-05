@@ -11,7 +11,7 @@ featured: true
 
 After working on Project MillMint's website with Hobart many times before, we decided on Discord to see if we could build a character creator together. It was a fairly tough challenge with many road-blocks and problems, but in the end it came out really cool.
 
-The rendering / exporting was the largest problem. I ran into various cases where the browser would run out of memory, or it would limit canvas memory. In one case we were using the `html-to-canvas` to export the HTML-based character markup to a PNG, only for it to return a PNG where half of the layers were invisible on Safari.
+The rendering / exporting was the largest problem. I ran into various cases where the browser would run out of memory, or it would limit canvas memory. In one case we were using the `html-to-canvas` library to export the HTML-based character markup to a PNG, only for it to return a PNG where half of the layers were invisible on Safari.
 
 You can try out the project at https://millmint.net/millmint/dolls.
 
