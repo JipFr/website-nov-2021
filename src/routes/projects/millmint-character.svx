@@ -13,7 +13,7 @@ After working on Project MillMint's website with Hobart many times before, we de
 
 The rendering / exporting was the largest problem. I ran into various cases where the browser would run out of memory, or it would limit canvas memory. In one case we were using the `html-to-canvas` to export the HTML-based character markup to a PNG, only for it to return a PNG where half of the layers were invisible on Safari.
 
-You can try out the project at https://millmint.net/dolls.
+You can try out the project at https://millmint.net/millmint/dolls.
 
 Some of my other work for Millmint can be found on the "other work" page, [here](/other-work)
 
