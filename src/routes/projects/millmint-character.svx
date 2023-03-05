@@ -1,7 +1,7 @@
 ---
 title: 'MillMint: Create-A-Character'
 description: After contributing various cool features to Hobart's site, we decided to build a character creator together.
-color: '#242B33'
+color: '#fdcc28'
 date: 2023-02-23T00:00:00Z
 icon: '/assets/icons/millmint-icon.png'
 iconBackground: '#fdcc28'
