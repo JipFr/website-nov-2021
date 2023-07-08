@@ -105,6 +105,36 @@ a.anchor,
 	filter: saturate(0) brightness(1.5);
 }
 
+[href='/projects/krab-bij-kas'] .icon-wrapper {
+	align-items: flex-end !important;
+	padding: 0 !important;
+
+	img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+.post ul {
+	padding-left: 0;
+	list-style: none;
+
+	li {
+		background-image: url('/uploads/arrow-right.svg');
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		margin: 20px 0;
+		padding-left: 3rem;
+		margin-left: -3rem;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.post ul li {
+		background-image: url('/uploads/arrow-right-white.svg');
+	}
+}
+
 .hidden {
 	opacity: 0;
 	pointer-events: none;

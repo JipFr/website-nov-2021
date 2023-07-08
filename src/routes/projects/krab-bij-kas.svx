@@ -1,0 +1,45 @@
+---
+title: Krab Bij Kas — version 2
+description: I overhauled and redesigned my personal finance app!
+color: '#457461'
+date: 2023-07-08T12:00:00Z
+icon: '/assets/icons/krab-v2.png'
+iconBackground: 'url(/uploads/krab-pride-bg.svg) 0% / cover'
+tech: Nuxt, Vue, SCSS, Supabase
+featured: true
+---
+
+No longer satisfied with the [previous version](/projects/budget) of Krab Bij Kas, my finance app, I decided to redesign it. In the process of doing so, I also added a bunch of new features.
+
+Not only does the new design look significantly better than the old, there are many new features that have really improved my quality of life.
+
+New features include:
+
+- **Price differences**, shown on top of the dashboard when you open the app: this shows when a product you purchased does not cost the same as the last time you purchased it.
+- **A pantry**. Add the "stock" category to add it to your transactions, and it will be added to your pantry. This way, you can keep track of how much you have left of a certain product.
+- **Recipes**. Add your own recipes, and Krab will tell you which of your recipes you can make based on what's in your pantry. It will also tell you how much each recipe costs, and how much the remaining ingredients will cost.
+- **Improved measurements in lists**. You can now add volumes (like 200ml, 1l, 200gr, 1kg, whatever you want) to your lists, and Krab will add only this amount to the pantry.
+- **Plugins**. I built a plugin system that can modify or insert transactions. At the moment, a plugin exists for Plaid so you can connect your bank account for automatic bank syncing, and a plugin for the Albert Heijn app so you can import your receipts from that store.
+- **Actual settings!** You can now change the reset date of the month, and also use non-euro currencies.
+- **Today's food budget**. Krab will automatically spread your food budget out over the month, so you how much you can spend today without running out of money before the end of the month.
+
+## Landing page
+
+I also designed and coded a new landing page that I'm quite happy with.
+
+![Hero](/uploads/krab-landing-hero.png)
+![FAQ section](/uploads/krab-landing-faq.png)
+![Features sections](/uploads/krab-landing-features.png)
+![Effortless meal planning section](/uploads/krab-landing-meal.png)
+!['Built by one guy' section](/uploads/krab-landing-built-by.png)
+
+## Screenshots of the app
+
+I'm really happy with the result, and I'm using it every day.
+
+![Krab dashboard](/uploads/krab-0.png)
+![Recurring transactions page](/uploads/krab-1.png)
+![Recipes page](/uploads/krab-2.png)
+![Pantry recipes](/uploads/krab-3.png)
+
+You can check it out over at https://krabbijkas.nl

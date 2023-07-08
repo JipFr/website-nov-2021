@@ -6,7 +6,6 @@ date: 2022-10-05T00:00:00Z
 icon: '/assets/icons/designcourse-icon.svg'
 iconBackground: '#2C2C2C'
 tech: Vue, Nuxt, SCSS
-featured: true
 ---
 
 Find the original project post [here](/projects/designcourse).

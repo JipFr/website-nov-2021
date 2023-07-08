@@ -19,8 +19,8 @@
 		}
 
 		&[data-tech='JS'] {
-			color: #554d13;
-			background: rgba(236, 220, 104, 0.2);
+			color: #ffe100;
+			background: rgba(210, 191, 49, 0.2);
 		}
 
 		&[data-tech='Vue'],
@@ -63,11 +63,20 @@
 			color: #ff3e02;
 			background: rgba(255, 62, 2, 0.15);
 		}
+
+		&[data-tech='Supabase'] {
+			color: #3ecfb2;
+			background: rgba(62, 207, 178, 0.057);
+		}
 	}
 	@media (prefers-color-scheme: light) {
 		.tech-tag[data-tech='Node.js'] {
 			color: #026e00;
 			background: rgba(2, 110, 0, 0.15);
+		}
+		.tech-tag[data-tech='JS'] {
+			color: #554d13;
+			background: rgba(236, 220, 104, 0.2);
 		}
 	}
 </style>
