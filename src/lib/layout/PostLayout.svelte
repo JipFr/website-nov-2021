@@ -86,6 +86,17 @@
 		font-size: 0.8rem;
 	}
 
+	.post.is-md-post :global(blockquote) {
+		padding-left: 20px;
+		border-left: 3px solid var(--border);
+	}
+
+	.post.is-md-post :global(p > code) {
+		background: var(--content);
+		padding: 1px;
+		border-radius: 2px;
+	}
+
 	@media (max-width: 700px) {
 		h1:not(.left) {
 			text-align: left;

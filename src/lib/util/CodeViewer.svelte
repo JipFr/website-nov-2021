@@ -174,7 +174,6 @@
 		min-height: 500px;
 		margin: 30px 0;
 		border: 1px solid var(--border);
-		--code-bg: #282c34;
 		background: var(--code-bg);
 
 		.code-side {

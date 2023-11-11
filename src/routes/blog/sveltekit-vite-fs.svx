@@ -1,0 +1,65 @@
+---
+title: 'How to resolve "Failed to resolve entry for package fs" in SvelteKit / Vite build?'
+description: This took me way too long.
+date: 11 nov 2023 00:00
+image: /uploads/sveltekit-fs.png
+tags: Tech, SvelteKit
+---
+
+## The quick answer:
+
+Replace the first snippet with the second.
+
+```js
+import fs from 'fs';
+```
+
+```js
+import fs from 'node:fs';
+```
+
+## The issue, and things I've tried:
+
+I was trying to use the `fs` module in a server load function in a SvelteKit project, and I was getting the following error:
+
+> [commonjs--resolver] Failed to resolve entry for package "fs". The package may have incorrect main/module/exports specified in its package.json.
+> error during build:
+> Error: Failed to resolve entry for package "fs". The package may have incorrect main/module/exports specified in its package.json.
+
+Of course, everything worked perfectly fine in dev and VSCode was throwing no errors at me, but the build step was failing in spite of that.
+
+Some steps I tried:
+
+- `npm install fs`. I didn't really expect it to work, but it was the first thing I tried. It didn't work.
+- `npm install @types/node`. I thought maybe it was a typing issue. It wasn't.
+
+### Aliasing `fs` to `rollup-plugin-node-builtins`
+
+So I turned to the internet, they could probably help me! (they could not).
+
+[this issue](https://github.com/nuxt/vite/issues/160) on the Nuxt/vite repo suggests aliasing `fs` to `require.resolve('rollup-plugin-node-builtins'),`. Even attempting that was troublesome, because this is the modern day SvelteKit, not the SvelteKit of old — no more `require`!
+
+Like a silly goose, the first thing I tried was `await import.meta.resolve`, which does not actually exist. Okay, next guess.
+
+I turned to the internet to find the ES6 replacement of `require.resolve`. [They suggested I just use `createRequire`](https://stackoverflow.com/a/62499498), which would allow you to use `require` in an ES6 module. I gave it a shot, and things changed! All of the sudden the `fs` error was gone, but I was getting some new issues:
+
+> node:internal/event_target:1012
+> process.nextTick (() => ());
+>
+> ^
+>
+> ReferenceError Error: require is not defined in ES module scope, you can use import instead
+>
+> This file is being treated as an ES module because it has a '.js' file extension and '/Users/jip/Desktop/elliesblog/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+
+Wonderful — the build step was now injecting CommonJS into my ES6 module, which was causing all sorts of issues.
+
+I tried logging the result of the `require.resolve` to inject it directly into the alias rather than using `createRequire`. The logic was that perhaps the `createRequire` was telling the build step to use CommonJS, breaking the whole thing? I replaced `require.resolve("rollup-plugin-node-builtins")` with `./node_modules/rollup-plugin-node-builtins/dist/rollup-plugin-node-builtins.cjs.js` and absolutely nothing changed. I was still getting the same error. Even replacing the `.cjs` with `.es6` (the module exports both) changed nothing.
+
+### Finally.
+
+In a GitHub issue only vaguely related I saw that somebody was importing `node:child_process` rather than just `child_process`. I figured "to hell with it" and tried importing `node:fs` rather than just `fs`, which did the trick.
+
+Why didn't Node just import `node:fs` in the build step rather than this fantasy `fs`? What other `fs` is there? These are questions not even Jonathan Frakes can answer on his show. I'm just happy it worked.
+
+It's possible this post is full of typos and grammatical errors, but I don't really care. I hope this helps somebody.
