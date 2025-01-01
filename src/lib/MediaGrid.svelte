@@ -38,7 +38,7 @@
 	$: attachments, createColumns();
 </script>
 
-<div class="media-grid">
+<div class="media-grid" class:just-one={columns.length === 1}>
 	{#each columns as col}
 		{#each col as attachment}
 			{#if isVideo(attachment)}
@@ -60,13 +60,17 @@
 	.media-grid {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 		grid-template-rows: repeat(var(--rows), 100px);
 		grid-auto-flow: column;
 		gap: 5px;
 
 		.span-two {
 			grid-row: span 2;
+		}
+
+		&.just-one > * {
+			height: 300px;
 		}
 
 		img,

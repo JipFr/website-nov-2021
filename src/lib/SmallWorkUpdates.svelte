@@ -94,6 +94,9 @@
 			<div>
 				<div class="update-inner">
 					<div>
+						{#if updates[0] === update}
+							<div class="badge">Latest</div>
+						{/if}
 						<h4 class="subtitle">
 							<span class="id">#{updates.length - updates.indexOf(update)}</span>
 							/ {formatDate(update.date)}
@@ -133,14 +136,14 @@
 		}
 
 		.badge {
-			position: absolute;
-			top: -6px;
-			left: -6px;
-			background: var(--body);
+			display: inline-block;
+			background: var(--theme);
+			color: white;
 			border: 1px solid var(--border);
 			border-radius: 4px;
 			padding: 2px 6px;
 			font-weight: bold;
+			margin-bottom: 4px;
 		}
 
 		> div {
@@ -172,7 +175,11 @@
 		}
 	}
 
-	.media {
+	.update {
 		width: 300px;
+
+		.media {
+			width: 100%;
+		}
 	}
 </style>
