@@ -74,11 +74,12 @@
 		}
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 900px) {
 		header nav {
 			display: flex;
 			overflow-x: auto;
-			width: calc(100% + 15vw);
+			// width: calc(100% + 15vw);
+			max-width: 100vw;
 			padding-left: 7.5vw;
 			padding-right: 7.5vw;
 			margin-left: -7.5vw;
