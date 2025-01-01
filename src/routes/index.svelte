@@ -23,6 +23,7 @@
 	import Title from '$lib/util/Title.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import ProjectList from '$lib/ProjectList.svelte';
+	import SmallWorkUpdates from '$lib/SmallWorkUpdates.svelte';
 
 	export let projects;
 </script>
@@ -34,10 +35,13 @@
 <Container>
 	<h1>About me</h1>
 	<p class="paragraph">
-		Hello there! I am a full-stack web developer from the Netherlands. I started in 2016, and since
-		then I've worked on countless projects, both for myself and for clients.
+		Hi there! My name is Jip, and I like to build things that solve problems. <!-- Primarily my own problems! -->
 	</p>
+</Container>
 
+<SmallWorkUpdates />
+
+<Container>
 	<h2>Find me online</h2>
 
 	<p class="paragraph">
