@@ -4,18 +4,24 @@
 	$: camera = {
 		x: 0,
 		y: 0,
-		zoom: 1
+		zoom: 0.8
 	};
 	$: mouseIsDown = false;
 	let canvas = null;
+	let mostRecent = 0;
 
 	function onScroll(evt) {
 		if (Array.from(evt.composedPath()).find((t) => t.classList.contains('canvas')))
 			evt.preventDefault();
 		if (!canvas) return;
 
-		if (evt.ctrlKey || evt.metaKey) {
-			let newZoomLevel = camera.zoom + (evt.deltaY > 0 ? -0.4 : 0.4);
+		if ((evt.ctrlKey || evt.metaKey) && mostRecent < Date.now() - 10) {
+			mostRecent = Date.now();
+			let deltaY = evt.deltaY;
+			if (Math.abs(deltaY) > 1) {
+				deltaY = Math.sign(deltaY) * 1;
+			}
+			let newZoomLevel = camera.zoom + deltaY * -0.1;
 			newZoomLevel = Math.min(5, Math.max(0.5, newZoomLevel));
 
 			const rect = canvas.getBoundingClientRect();
@@ -80,20 +86,23 @@
 		if (!container) return;
 
 		// for (const child of Array.from(container.children)) {
-		console.log(container.children[0]);
-		for (const child of [container.children[0]]) {
-			const rect = child.getBoundingClientRect();
 
-			const left = rect.left - canvasRect.left;
-			const top = rect.top - canvasRect.top;
-			const right = left + rect.width;
-			const bottom = top + rect.height;
+		const child = container.children[0];
+		if (!child) return;
 
-			if (left < smallestX) smallestX = left;
-			if (top < smallestY) smallestY = top;
-			if (right > largestX) largestX = right;
-			if (bottom > largestY) largestY = bottom;
-		}
+		const rect = child.getBoundingClientRect();
+
+		const left = rect.left - canvasRect.left;
+		const top = rect.top - canvasRect.top;
+		const right = left + rect.width;
+		const bottom = top + rect.height;
+
+		if (left < smallestX) smallestX = left;
+		if (top < smallestY) smallestY = top;
+		if (right > largestX) largestX = right;
+		if (bottom > largestY) largestY = bottom;
+
+		// }
 
 		const centerX = (smallestX + largestX) / 2;
 		const centerY = (smallestY + largestY) / 2;
@@ -138,8 +147,7 @@
 <style lang="scss">
 	.canvas {
 		width: 100%;
-		height: 70vh;
-		border: 1px dashed var(--border);
+		height: 100%;
 		user-select: none;
 		display: inline-flex;
 		overflow: hidden;

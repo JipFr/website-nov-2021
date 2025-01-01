@@ -14,6 +14,7 @@
 		<!-- Navigation -->
 		<nav>
 			<a sveltekit:prefetch class:active={$page.path === '/'} href="/"> About </a>
+			<a sveltekit:prefetch class:active={$page.path === '/tidbits'} href="/tidbits"> Tidbits </a>
 			<a sveltekit:prefetch class:active={$page.path === '/projects'} href="/projects">
 				Projects
 			</a>

@@ -11,6 +11,14 @@
 	fetch('https://work.jipfr.nl/')
 		.then((res) => res.json())
 		.then((data) => {
+			data = [
+				{
+					id: 0,
+					content: 'Tidbits',
+					body: "Hello, and welcome to the tidbits page on my website! This is where I share things I'm working on."
+				},
+				...data
+			];
 			updates = data.map((t) => {
 				return {
 					...t,
@@ -94,20 +102,29 @@
 			<div>
 				<div class="update-inner">
 					<div>
-						{#if updates[0] === update}
+						{#if updates[1] === update}
 							<div class="badge">Latest</div>
 						{/if}
-						<h4 class="subtitle">
-							<span class="id">#{updates.length - updates.indexOf(update)}</span>
-							/ {formatDate(update.date)}
-						</h4>
+						{#if update.date}
+							<h4 class="subtitle">
+								<span class="id">#{updates.length - updates.indexOf(update)}</span>
+								/ {formatDate(update.date)}
+							</h4>
+						{/if}
 						<h3 class="title">
 							{update.content}
 						</h3>
+						{#if update.body}
+							<p class="body">
+								{update.body}
+							</p>
+						{/if}
 					</div>
-					<div class="media">
-						<MediaGrid attachments={update.attachments} />
-					</div>
+					{#if update.attachments}
+						<div class="media">
+							<MediaGrid attachments={update.attachments} />
+						</div>
+					{/if}
 				</div>
 			</div>
 		</div>
