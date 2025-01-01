@@ -10,6 +10,8 @@
 	let canvas = null;
 	let mostRecent = 0;
 
+	let bounds = { left: Infinity, top: Infinity, right: -Infinity, bottom: -Infinity };
+
 	function onScroll(evt) {
 		if (Array.from(evt.composedPath()).find((t) => t.classList.contains('canvas')))
 			evt.preventDefault();
@@ -17,10 +19,9 @@
 
 		if ((evt.ctrlKey || evt.metaKey) && mostRecent < Date.now() - 10) {
 			mostRecent = Date.now();
+
 			let deltaY = evt.deltaY;
-			if (Math.abs(deltaY) > 1) {
-				deltaY = Math.sign(deltaY) * 1;
-			}
+			if (Math.abs(deltaY) > 1) deltaY = Math.sign(deltaY) * 1;
 			let newZoomLevel = camera.zoom + deltaY * -0.1;
 			newZoomLevel = Math.min(5, Math.max(0.5, newZoomLevel));
 
@@ -28,26 +29,48 @@
 			const focusX = evt.clientX - rect.left;
 			const focusY = evt.clientY - rect.top;
 
-			const offsetX = focusX - camera.x;
-			const offsetY = focusY - camera.y;
+			const offsetX = focusX + camera.x;
+			const offsetY = focusY + camera.y;
 
 			const newViewCenterX = focusX - offsetX * (newZoomLevel / camera.zoom);
 			const newViewCenterY = focusY - offsetY * (newZoomLevel / camera.zoom);
 
-			camera.x = Math.round(newViewCenterX);
-			camera.y = Math.round(newViewCenterY);
+			camera.x = Math.round(-newViewCenterX);
+			camera.y = Math.round(-newViewCenterY);
 			camera.zoom = newZoomLevel;
+
+			requestAnimationFrame(setBounds);
 		} else {
-			camera.x -= evt.deltaX;
-			camera.y -= evt.deltaY;
+			camera.x += evt.deltaX;
+			camera.y += evt.deltaY;
 		}
+		checkBounds();
 	}
 
 	function onMouseMove(evt) {
 		if (!mouseIsDown) return;
 
-		camera.x += evt.movementX;
-		camera.y += evt.movementY;
+		camera.x -= evt.movementX;
+		camera.y -= evt.movementY;
+
+		checkBounds();
+	}
+
+	function checkBounds() {
+		setBounds();
+		const canvasRect = canvas.getBoundingClientRect();
+
+		const margin = 300;
+
+		const leftEdge = bounds.left - margin;
+		const topEdge = bounds.top - margin;
+		const rightEdge = bounds.right - canvasRect.width + margin;
+		const bottomEdge = bounds.bottom - canvasRect.height + margin;
+
+		if (camera.x < leftEdge) camera.x = leftEdge;
+		if (camera.y < topEdge) camera.y = topEdge;
+		if (camera.x > rightEdge) camera.x = rightEdge;
+		if (camera.y > bottomEdge) camera.y = bottomEdge;
 	}
 
 	function onMouseDown(evt) {
@@ -74,18 +97,16 @@
 		window.addEventListener('wheel', onScroll, { passive: false });
 
 		// Take all children to find the center-point we should set the camera to
-		let smallestX = Infinity;
-		let smallestY = Infinity;
-		let largestX = -Infinity;
-		let largestY = -Infinity;
+		let firstChildSmallX = Infinity;
+		let firstChildSmallY = Infinity;
+		let firstChildLargeX = -Infinity;
+		let firstChildLargeY = -Infinity;
 
 		if (!canvas) return;
 		const canvasRect = canvas.getBoundingClientRect();
 
 		const container = canvas.querySelector('.node-container');
 		if (!container) return;
-
-		// for (const child of Array.from(container.children)) {
 
 		const child = container.children[0];
 		if (!child) return;
@@ -97,18 +118,46 @@
 		const right = left + rect.width;
 		const bottom = top + rect.height;
 
-		if (left < smallestX) smallestX = left;
-		if (top < smallestY) smallestY = top;
-		if (right > largestX) largestX = right;
-		if (bottom > largestY) largestY = bottom;
+		if (left < firstChildSmallX) firstChildSmallX = left;
+		if (top < firstChildSmallY) firstChildSmallY = top;
+		if (right > firstChildLargeX) firstChildLargeX = right;
+		if (bottom > firstChildLargeY) firstChildLargeY = bottom;
 
-		// }
+		const centerX = (firstChildSmallX + firstChildLargeX) / 2;
+		const centerY = (firstChildSmallY + firstChildLargeY) / 2;
 
-		const centerX = (smallestX + largestX) / 2;
-		const centerY = (smallestY + largestY) / 2;
+		camera.x = centerX - canvas.scrollWidth / 2;
+		camera.y = centerY - canvas.scrollHeight / 2;
 
-		camera.x = canvas.scrollWidth / 2 - centerX;
-		camera.y = canvas.scrollHeight / 2 - centerY;
+		// Bounds
+		setBounds();
+		requestAnimationFrame(setBounds);
+	}
+
+	function setBounds() {
+		if (!canvas) return;
+		const canvasRect = canvas.getBoundingClientRect();
+		bounds = { left: Infinity, top: Infinity, right: -Infinity, bottom: -Infinity };
+
+		const styles = getComputedStyle(canvas);
+		const cameraX = parseInt(styles.getPropertyValue('--x'));
+		const cameraY = parseInt(styles.getPropertyValue('--y'));
+
+		const container = canvas.querySelector('.node-container');
+
+		for (const child of Array.from(container.children)) {
+			const rect = child.getBoundingClientRect();
+
+			const left = rect.left - canvasRect.left - cameraX;
+			const top = rect.top - canvasRect.top - cameraY;
+			const right = left + rect.width;
+			const bottom = top + rect.height;
+
+			if (left < bounds.left) bounds.left = left;
+			if (top < bounds.top) bounds.top = top;
+			if (right > bounds.right) bounds.right = right;
+			if (bottom > bounds.bottom) bounds.bottom = bottom;
+		}
 	}
 
 	onDestroy(() => {
@@ -132,11 +181,13 @@
 	bind:this={canvas}
 	on:mousedown={onMouseDown}
 	class={['canvas', mouseIsDown ? 'cursor-grabbing' : ''].join(' ')}
-	style={`--x: ${camera.x}px; --y: ${camera.y}px; --zoom: ${camera.zoom};`}
+	style={`--x: ${camera.x * -1}px; --y: ${camera.y * -1}px; --zoom: ${camera.zoom};`}
 >
 	<div
 		class="canvas-inner"
-		style={`transform: translate3D(${camera.x}px, ${camera.y}px, 0) scale(${camera.zoom})`}
+		style={`transform: translate3D(${camera.x * -1}px, ${camera.y * -1}px, 0) scale(${
+			camera.zoom
+		})`}
 	>
 		<div class="relative bg-teal-400 node-container">
 			<slot />

@@ -16,6 +16,7 @@
 <style global>
 	main {
 		display: flex;
+		flex-direction: column;
 	}
 	body {
 		display: grid;
