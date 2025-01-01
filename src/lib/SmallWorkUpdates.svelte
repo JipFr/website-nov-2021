@@ -1,9 +1,23 @@
 <script>
 	import PanZoom from '$lib/panzoom/PanZoom.svelte';
+	import Div from '$lib/panzoom/Div.svelte';
 	import MediaGrid from '$lib/MediaGrid.svelte';
+	import { onMount } from 'svelte';
 
 	let visible = false;
 	let updates = [];
+
+	let windowWidth = 1920;
+
+	onMount(() => {
+		windowWidth = window.innerWidth;
+		window.addEventListener('resize', () => {
+			if (windowWidth !== window.innerWidth) {
+				windowWidth = window.innerWidth;
+				checkOverlaps();
+			}
+		});
+	});
 
 	const spiralFactorThingie = 1;
 
@@ -90,9 +104,11 @@
 			d.getHours()
 		)}:${pad(d.getMinutes())}`;
 	}
+
+	$: RenderComponent = windowWidth > 800 ? PanZoom : Div;
 </script>
 
-<PanZoom>
+<svelte:component this={RenderComponent}>
 	{#each updates as update}
 		<div
 			class={['update', visible ? 'visible' : ''].join(' ')}
@@ -129,7 +145,7 @@
 			</div>
 		</div>
 	{/each}
-</PanZoom>
+</svelte:component>
 
 <style lang="scss">
 	.point {
@@ -138,10 +154,15 @@
 		position: absolute;
 		background: red;
 	}
+	@media (min-width: 800px) {
+		.update {
+			width: 300px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+		}
+	}
 	.update {
-		position: absolute;
 		overflow: hidden;
-		transform: translate(-50%, -50%);
 
 		opacity: 0;
 		transition: opacity 300ms;
@@ -179,6 +200,10 @@
 		img {
 			user-select: none;
 		}
+
+		.media {
+			width: 100%;
+		}
 	}
 
 	.update-inner {
@@ -189,14 +214,6 @@
 			font-size: 1rem;
 			font-weight: 600;
 			margin-bottom: 0.5rem;
-		}
-	}
-
-	.update {
-		width: 300px;
-
-		.media {
-			width: 100%;
 		}
 	}
 </style>
