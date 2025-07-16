@@ -1,0 +1,174 @@
+{
+    "name": "Jips huis",
+    "description": "Ba ba ba aba ba ba abab aba ba abababa",
+    "steps": [
+        {
+            "title": "23 September 2023",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2023-09-23",
+                "mobile": "Studio 2023-09-23"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "27 September 2023",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2023-09-27",
+                "mobile": "Studio 2023-09-27"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "20 Februari 2024",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2024-02-20",
+                "mobile": "Studio 2024-02-20"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "28 April 2024",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2024-04-28",
+                "mobile": "Studio 2024-04-28"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "4 Mei 2024",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2024-05-04",
+                "mobile": "Studio 2024-05-04"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "7 November 2024",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2024-11-07",
+                "mobile": "Studio 2024-11-07"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "25 Januari 2025",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2025-01-09",
+                "mobile": "Studio 2025-01-09"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "10 April 2025",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2025-04-10",
+                "mobile": "Studio 2025-04-10"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "20 Juni 2025",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2025-06-20",
+                "mobile": "Studio 2025-06-20"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "11 Juli 2025",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2025-07-11",
+                "mobile": "Studio 2025-07-11"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "13 Juli 2025",
+            "subtitle": "ASW",
+            "sogs": {
+                "desktop": "Studio 2025-07-13",
+                "mobile": "Studio 2025-07-13"
+            },
+            "copy": {
+                "title": "ASW",
+                "description": "Jips oude huis"
+            }
+        },
+        {
+            "title": "12 Juni 2025",
+            "subtitle": "RDS",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-06-12",
+                "mobile": "Roerdompstraat 2025-06-12"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        },
+        {
+            "title": "8 Juli 2025",
+            "subtitle": "RDS",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-07-08",
+                "mobile": "Roerdompstraat 2025-07-08"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        },
+        {
+            "title": "13 Juli 2025",
+            "subtitle": "RDS",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-07-13",
+                "mobile": "Roerdompstraat 2025-07-13"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        }
+    ]
+}
