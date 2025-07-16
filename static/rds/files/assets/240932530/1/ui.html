@@ -1,0 +1,64 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- I miss Tailwind -->
+<div class="overlay">
+    <div class="modal">
+
+        <button class="button start-viewer absolute-button" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            Sluit uitleg
+        </button>
+
+        <div class="modal-top">
+            <img class="logo" />
+            <h1>...</h1>
+        </div>
+        <div class="modal-content">
+            <div>
+                <h1>...</h1>
+                <p class="description">
+                    ...
+                </p>
+                <div class="flex">
+                    <button class="button start-viewer" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        Start viewer
+                    </button>
+                    <div class="loader">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="controls-card">
+                    <!-- Jip was hier! -->
+                    <div class="control">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10.6309" width="13" height="1.5" fill="#023059"/><rect x="11" y="3.63086" width="1" height="7" fill="#023059"/><path d="M5 6.63086C5 4.974 6.34315 3.63086 8 3.63086H11V10.6309H5V6.63086Z" fill="#2E97F2"/><rect x="10" y="4.63086" width="3" height="5" rx="1" fill="#023059"/><rect x="4.75" y="3.38086" width="13.5" height="18.5" rx="3.25" stroke="#023059" stroke-width="1.5"/></svg>
+                        <p>Houd uw linker muisknop ingedrukt om de camera te bewegen</p>
+                    </div>
+                    <div class="control">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10.1309" width="13" height="1.5" fill="#023059"/><rect x="11" y="3.13086" width="1" height="7" fill="#023059"/><rect x="10" y="4.13086" width="3" height="5" rx="1" fill="#2E97F2"/><rect x="4.75" y="2.88086" width="13.5" height="18.5" rx="3.25" stroke="#023059" stroke-width="1.5"/></svg>
+                        <p>Gebruik uw scrollwiel om in en uit te zoomen</p>
+                    </div>
+                    <div class="control">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="11.1309" width="15" height="2" fill="#023059"/><circle cx="5" cy="12.1309" r="3" fill="#023059"/><circle cx="19" cy="12.1309" r="3" fill="#2E97F2"/></svg>
+                        <p>Klik onderin op de tijdlijn om door fases te bewegen</p>
+                    </div>
+                    <div class="control">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="13" width="6" height="6" rx="1" fill="#2E97F2"/><rect x="16" y="13" width="6" height="6" rx="1" fill="#2E97F2"/><rect x="9.5" y="13.5" width="5" height="5" rx="0.5" fill="#023059" stroke="#023059"/><rect x="9.5" y="6.5" width="5" height="5" rx="0.5" fill="#023059" stroke="#023059"/></svg>
+                        <p>Gebruik uw pijltoetsen om door de fases te bewegen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="credit">
+        Made by <a href="https://www.architectuurproducties.nl/" target="_blank">Architectuurproducties</a>
+    </div>
+</div>
+
+<button class="button open-modal square">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+</button>

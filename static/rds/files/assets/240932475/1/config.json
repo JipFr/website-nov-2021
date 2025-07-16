@@ -1,0 +1,42 @@
+{
+    "name": "Jips huis",
+    "description": "Ba ba ba aba ba ba abab aba ba abababa",
+    "steps": [
+        {
+            "title": "12 Juni",
+            "subtitle": "2025",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-06-12",
+                "mobile": "Roerdompstraat 2025-06-12"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        },
+        {
+            "title": "8 Juli",
+            "subtitle": "2025",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-07-08",
+                "mobile": "Roerdompstraat 2025-07-08"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        },
+        {
+            "title": "13 Juli",
+            "subtitle": "2025",
+            "sogs": {
+                "desktop": "Roerdompstraat 2025-07-13",
+                "mobile": "Roerdompstraat 2025-07-13"
+            },
+            "copy": {
+                "title": "Roerdompstraat",
+                "description": "Jips huis"
+            }
+        }
+    ]
+}
