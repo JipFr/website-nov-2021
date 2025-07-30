@@ -19,8 +19,6 @@
 		});
 	});
 
-	const spiralFactorThingie = 1;
-
 	// Fetch
 	fetch('https://work.jipfr.nl/')
 		.then((res) => res.json())
@@ -33,24 +31,25 @@
 				},
 				...data
 			];
-			updates = data.map((t) => {
+			updates = data.map((t, i) => {
 				return {
 					...t,
-					spiralI: 0,
-					spiral: getSpiralCoordinates(0, 0, spiralFactorThingie)
+					posIndex: i,
+					pos: getGridCoordinates(i)
 				};
 			});
+			visible = true;
 		})
 		.catch((err) => {
 			console.error(err);
 		});
 
-	$: updates, checkOverlaps();
+	$: updates, redoPositions();
 
-	function checkOverlaps(startIndex = 1) {
+	function redoPositions() {
 		if (!updates || updates.length === 0) return;
 
-		for (let i = startIndex; i < updates.length; i++) {
+		for (let i = 0; i < updates.length; i++) {
 			const update = updates[i];
 			if (!update?.el) return;
 
@@ -68,12 +67,7 @@
 					rect.bottom > prevRect.top
 				) {
 					for (let k = i; k < updates.length; k++) {
-						updates[k].spiralI += 5;
-						updates[k].spiral = getSpiralCoordinates(
-							updates[k].spiralI / 10,
-							0,
-							spiralFactorThingie
-						);
+						updates[k].pos = getGridCoordinates(updates[k].posIndex);
 					}
 					requestAnimationFrame(() => checkOverlaps(i));
 					return;
@@ -83,15 +77,40 @@
 		visible = true;
 	}
 
-	function getSpiralCoordinates(t, a = 0, b = 1) {
-		// The radial distance from the origin
-		const r = a + b * t;
+	function getGridCoordinates(index) {
+		// Spiral grid coordinates: index 0 is center (0,0), then spiral outwards
+		const cellSize = 300;
+		if (index === 0) return { x: 0, y: 0 };
 
-		// Convert polar coordinates (r, theta) to Cartesian coordinates (x, y)
-		const x = r * Math.cos(t);
-		const y = r * Math.sin(t);
+		let x = 0,
+			y = 0,
+			dx = 1,
+			dy = 0,
+			segmentLength = 1;
+		let steps = 0,
+			directionChanges = 0;
 
-		return { x, y };
+		for (let i = 1; i <= index; i++) {
+			x += dx;
+			y += dy;
+			steps++;
+			if (steps === segmentLength) {
+				steps = 0;
+				// Rotate direction: right -> up -> left -> down -> right ...
+				const temp = dx;
+				dx = -dy;
+				dy = temp;
+				directionChanges++;
+				if (directionChanges % 2 === 0) {
+					segmentLength++;
+				}
+			}
+		}
+
+		return {
+			x: x * cellSize,
+			y: y * cellSize
+		};
 	}
 
 	function pad(num) {
@@ -112,7 +131,11 @@
 	{#each updates as update}
 		<div
 			class={['update', visible ? 'visible' : ''].join(' ')}
-			style={[`left: ${update.spiral.x}px`, `top: ${update.spiral.y}px`].join(';')}
+			style={[
+				`left: ${update.pos.x}px`,
+				`top: ${update.pos.y}px`,
+				`animation-delay: ${update.posIndex < 140 ? Math.max(0, 140 - update.posIndex) * 15 : 0}ms`
+			].join(';')}
 			bind:this={update.el}
 		>
 			<div>
@@ -159,7 +182,7 @@
 			width: 300px;
 			height: 300px;
 			position: absolute;
-			transform: translate(-50%, -50%);
+			transform: rotate(0) translate(-50%, -50%);
 		}
 	}
 	.update {
@@ -171,7 +194,8 @@
 		padding: 10px;
 
 		&.visible {
-			opacity: 1;
+			// opacity: 1;
+			animation: stackIn 100ms ease-in-out forwards;
 		}
 
 		.badge {
@@ -219,6 +243,17 @@
 			font-size: 1rem;
 			font-weight: 600;
 			margin-bottom: 0.5rem;
+		}
+	}
+
+	@keyframes stackIn {
+		from {
+			opacity: 0;
+			margin-top: -20px;
+		}
+		to {
+			opacity: 1;
+			margin-top: 0;
 		}
 	}
 </style>

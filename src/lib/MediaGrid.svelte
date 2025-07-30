@@ -7,6 +7,7 @@
 	}
 
 	let columns = [];
+	let mouseDownAt = 0;
 
 	function createColumns() {
 		columns = [];
@@ -27,6 +28,10 @@
 				i++;
 			}
 		}
+	}
+
+	function setModal(attachment) {
+		if (Date.now() < mouseDownAt + 200) modal = attachment;
 	}
 
 	$: attachments, createColumns();
@@ -59,7 +64,12 @@
 		{#each col as attachment}
 			{#if isVideo(attachment)}
 				<div class="video-with-overlay" class:span-two={col.length == 1}>
-					<video src={attachment.url} muted on:click={() => (modal = attachment)} />
+					<video
+						src={attachment.url}
+						muted
+						on:mousedown={() => (mouseDownAt = Date.now())}
+						on:click={() => setModal(attachment)}
+					/>
 				</div>
 			{:else}
 				<img
@@ -68,7 +78,8 @@
 					alt={attachment.name}
 					draggable="false"
 					class:span-two={col.length == 1}
-					on:click={() => (modal = attachment)}
+					on:mousedown={() => (mouseDownAt = Date.now())}
+					on:click={() => setModal(attachment)}
 				/>
 			{/if}
 		{/each}

@@ -1,10 +1,11 @@
 <script>
 	import { onDestroy, onMount } from 'svelte';
 
+	const startZoom = 0.4;
 	$: camera = {
 		x: 0,
 		y: 0,
-		zoom: 0.8
+		zoom: startZoom
 	};
 	$: mouseIsDown = false;
 	let canvas = null;
@@ -80,17 +81,46 @@
 
 		mouseIsDown = true;
 
-		function onMouseUp() {
-			mouseIsDown = false;
-			window.removeEventListener('mouseup', onMouseUp);
-			window.removeEventListener('mousemove', onMouseMove);
-		}
-
 		window.addEventListener('mouseup', onMouseUp);
 		window.addEventListener('mousemove', onMouseMove);
 	}
 
+	function onMouseUp() {
+		mouseIsDown = false;
+		window.removeEventListener('mouseup', onMouseUp);
+		window.removeEventListener('mousemove', onMouseMove);
+	}
+
+	onMount(animateZoomInOnMount);
 	onMount(focusCenter);
+
+	const endZoom = 0.8;
+	function animateZoomInOnMount() {
+		if (!canvas) return;
+
+		const startTime = performance.now();
+		const duration = 5000; // 1000ms
+
+		function easeInOut(t) {
+			return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+		}
+
+		function animate(time) {
+			const elapsed = time - startTime;
+			const progress = Math.min(elapsed / duration, 1);
+			const eased = easeInOut(progress);
+
+			camera.zoom = startZoom + (endZoom - startZoom) * eased;
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			} else {
+				camera.zoom = endZoom; // Ensure we end at the correct zoom level
+			}
+		}
+
+		requestAnimationFrame(animate);
+	}
 
 	function focusCenter() {
 		if (typeof window === 'undefined') return;
@@ -126,8 +156,8 @@
 		const centerX = (firstChildSmallX + firstChildLargeX) / 2;
 		const centerY = (firstChildSmallY + firstChildLargeY) / 2;
 
-		camera.x = centerX - canvas.scrollWidth / 2;
-		camera.y = centerY - canvas.scrollHeight / 2;
+		camera.x = centerX - canvasRect.width / 2;
+		camera.y = centerY - canvasRect.height / 2;
 
 		// Bounds
 		setBounds();
@@ -185,9 +215,7 @@
 >
 	<div
 		class="canvas-inner"
-		style={`transform: translate3D(${camera.x * -1}px, ${camera.y * -1}px, 0) scale(${
-			camera.zoom
-		})`}
+		style={`transform: translate3D(${camera.x * -1}px, ${camera.y * -1}px, 0) scale(var(--zoom));`}
 	>
 		<div class="relative bg-teal-400 node-container">
 			<slot />
@@ -215,7 +243,7 @@
 		> .canvas-inner {
 			display: inline;
 			height: max-content;
-			transform-origin: top left;
+			transform-origin: 0 0;
 
 			> div {
 				position: relative;
