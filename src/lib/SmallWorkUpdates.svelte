@@ -157,6 +157,7 @@
 	@media (min-width: 800px) {
 		.update {
 			width: 300px;
+			height: 300px;
 			position: absolute;
 			transform: translate(-50%, -50%);
 		}
@@ -190,10 +191,14 @@
 			border: 1px solid var(--border);
 			padding: 20px;
 			border-radius: 4px;
+			height: 100%;
 		}
 
 		.update-inner {
 			position: relative;
+			height: 100%;
+			display: grid;
+			grid-template-rows: auto minmax(0, 1fr);
 		}
 
 		&,

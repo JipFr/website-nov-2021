@@ -78,15 +78,16 @@
 <style lang="scss">
 	.media-grid {
 		width: 100%;
+		height: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-		grid-template-rows: repeat(var(--rows), 100px);
+		grid-template-rows: repeat(2, minmax(0px, 1fr));
 		grid-auto-flow: column;
 		gap: 5px;
 
 		.span-two {
 			grid-row: span 2;
-			height: 240px;
+			height: 100%;
 		}
 
 		.video-with-overlay {
