@@ -1,5 +1,5 @@
 <div class="contact-box">
-	<p>Any questions or concerns? You can send me an e-mail!</p>
+	<p>Thoughts? Questions? Concerns? E-mail me!</p>
 	<p><a href="mailto:jip@frij.link">jip@frij.link</a></p>
 </div>
 

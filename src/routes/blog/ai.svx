@@ -1,0 +1,36 @@
+---
+title: 'Not everything needs to be about AI'
+description: About humanity, art and imperfection.
+date: '19 jan 2026 20:55'
+image: /uploads/claude-hipaa.jpg
+tags: Tech, AI
+---
+
+<script>
+import QuestionsAndConcerns from '$lib/util/QuestionsAndConcerns.svelte'
+</script>
+
+When I see a beautiful piece of art on the internet, a common sentiment or comment I see is that “AI could never do this”. Instead of celebrating the vast wonder that is human creativity and art, many choose to spend their time thinking about how it compares to AI.
+
+A technology that was once promised to us as making it so we wouldn’t have to do our dishes now threatens to greatly diminish the value people place on art. People become sceptics; when they see something, they wonder “did a human, or a team of humans, pour their hearts and souls into this, or was this created by somebody who spent all of 15 seconds typing a prompt?”. The value of beauty and meaning is greatly diminished, because there is a definite potential that there _is_ no meaning. Art isn’t art because it’s a picture that looks pretty, it’s art because it was created by somebody whose entire life has led to them creating a piece. It’s art because it was created by somebody who has spent many years getting as good as they possibly can at their craft, putting hours and hours into learning to paint, learning to make music, learning to sculpt, or to 3d-model, or to do anything else it is humans do to create art. Art is beautiful because it reflect a vast lived experience — not because it makes for a pretty picture.
+
+Instead of celebrating human ingenuity, we choose to spend our time thinking a machine that will end up consuming itself.
+
+AI illegally learns from the internet and novels. When people and writers pivot to using AI to write their content for themselves, what will this cause outside of a stagnation in our culture? The technology will always keep coming back to the same ideas because those ideas are all it has been trained on. AI pictures look the same. AI-written text frequently reads the same. When these pieces of media are shared on the internet, it informs the next generation of models what it should sound like, until we have mono-culture based purely on what Big Tech has deemed relevant for us. These LLMs are trained on largely arbitrary parameters, decided by people just like you and I. They don’t know any better than you or I, either.
+
+When people have a hard message to somebody, they ask AI. Instead of writing heartfelt speeches or messages to or about the people we love, we ask AI “for inspiration”. A model trained purely in the interest of big companies and their shareholders is given the power to decide what we tell the people we love. Instead of challenging ourselves to think of what really would be nice for somebody to hear, we let a computer decide it. Just like the self-checkout at grocery stores or online shopping have replaced human interaction in the interest of efficiency and automation, many people are now choosing to automate themselves.
+
+What, then, will they have? With the way things are going, all people will have is to be a wage slave; a corporate drone who does nothing but menial tasks computers _could_ be doing — if that’s what we’d spent our money on instead of training yet another LLM model. Instead of replacing human art and creativity, the human soul, computers could have been replacing the dishes, vacuuming the house, re-stocking supermarkets. Computers should try to replace menial jobs, not art and creativity.
+For our loved ones in need, it’s not about crafting the perfect message. It’s not about saying the exact right words. It’s about them knowing that you’re there for them if they need it. That you love them and that you care about them, and that they have a shoulder to cry on should they want to do that.
+
+Many people have chosen to stop challenging themselves. Instead of challenging themselves to learn a language and to pick up a book or purely to translate single sentences, people will tell AI to “write a message in X language about [something they’ve described in their native language]”. Instead of thinking about their own arguments for why they do something, they tell AI to “defend why it’s okay for me to have done X”. What will become of a person who is never once made to question their own biases, their own opinions, or their own privileges? They will live in ignorance for their entire lives.
+
+Human imperfection can be beautiful, so instead of thinking about how AI could never reflect the vast beauty of lived experience perhaps we should simply choose to see and appreciate the beauty of said lived experience. It might just be time to stop purely going for convenience, and to start thinking about what really matters to us.
+
+I think it goes without saying that no generative AI was used in the writing of this post. It is imperfect. It doesn’t have a single coherent message, perfect grammar, a great structure, nor does it touch on everything I feel about AI. It doesn’t even stick purely to AI, but also complains about the desperate capitalist need for speed and efficiency, even at the cost of humanity. I haven’t even touched on the environmental impact, the social impact, or even the impact on objective truth and the news. It is imperfect because it is human, and perhaps we should appreciate that a little more than we do.
+
+I wrote this in part to really examine and question my own opinions on technology and humanity. I confess I am not perfect. I have in the past used AI for things, I will likely use AI for things in the future. In spite of what I preach, I am a human being who likes convenience. I try my best to be authentically human and to practice what I preach, but I, just like everybody, am not perfect. Chances are I will read this back in a couple of years and cringe, but that’s what it means to grow. In a couple years, I will create something else out of my lived experience — something AI will never be able to do.
+
+This is my message to you: challenge yourself. Read things written by humans. Appreciate human lived experience. Ask your friends for help with something instead of your computer. Perhaps try talking to your cashier.
+
+<QuestionsAndConcerns />
