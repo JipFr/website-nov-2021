@@ -2,7 +2,7 @@
 title: 'Not everything needs to be about AI'
 description: About humanity, art and imperfection.
 date: '19 jan 2026 20:55'
-image: /uploads/claude-hipaa.jpg
+image: https://jipfr.nl/uploads/claude-hipaa.jpg
 tags: Tech, AI
 ---
 
